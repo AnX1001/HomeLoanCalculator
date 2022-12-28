@@ -1,10 +1,11 @@
-import "./StylingCalculationInputsView.scss";
+import styles from "./StylingCalculationInputsView.module.scss";
+
 /* the wrapper grows in height along with content. The width is always as large as window width. */
 
 function CalculationInputsView() {
   return (
-    <div className="wrapper-CalculationInputsView">
-      <p>Innside wfrapper</p>
+    <div className={styles.wrapper}>
+      <p>calculationinputsview render</p>
     </div>
   );
 }

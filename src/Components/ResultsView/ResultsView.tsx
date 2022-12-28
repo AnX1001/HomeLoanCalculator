@@ -1,8 +1,8 @@
-import "./StylingResultsView.scss";
+import styles from "./StylingResultsView.module.scss";
 
 function ResultsView() {
   return (
-    <div className="wrapper-ResultsView">
+    <div className={styles.wrapper}>
       <p>Resultsview</p>
     </div>
   );

@@ -1,6 +1,6 @@
 @import "../MainStyling/MainStyling";
 
-.wrapper-ResultsView {
+.wrapper {
+  background-color: $customBeige;
   padding: $spacingFiftyPx $spacingThirtyPx $spacingThirtyPx $spacingThirtyPx;
-  background-color: $darkBackground;
 }
