@@ -1,5 +1,5 @@
 import React from 'react';
-import "./styling.scss";
+import "./MainStyling/MainStyling.scss";
 
 function App() {
   return (
