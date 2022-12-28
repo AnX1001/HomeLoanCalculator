@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Red+Hat+Text:wght@500&display=swap");
 
+/* Remove margin and padding from the body */
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
 
 /* Colors */
 
@@ -10,12 +17,12 @@ $customBeige: #FDF9F2;
 
 
 /* Spacing: 5, 10, 15, 30, 40, 50px in height  */
-$superSmall: 5px;
-$small: 10px;
-$medium: 15px;
-$large: 30px;
-$extraLarge: 40px;
-$superLarge: 50px;
+$spacingFivePx: 5px;
+$spacingPx: 10px;
+$spacingFifteenPx: 15px;
+$spacingThirtyPx: 30px;
+$spacingFourtyPx: 40px;
+$spacingFiftyPx: 50px;
 
 /* Typography using fonts Poppins and Red Hat Text from Google Fonts */
 
@@ -49,3 +56,4 @@ p {
   line-height: 150%;
   font-weight: 400;
 }
+

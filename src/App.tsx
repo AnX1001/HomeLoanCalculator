@@ -1,13 +1,11 @@
 import React from 'react';
-import "./MainStyling/MainStyling.scss";
+import CalculationInputsView from "./Components/CalculationInputsView/CalculationInputsView";
+import "./Components/MainStyling/MainStyling.scss";
 
 function App() {
   return (
     <div className="App">
-      <h1>H1 text</h1>
-      <h2>h2 text</h2>
-      <p>Paragraph text</p>
-      <p className="smallerParagraph">Smaller paragraph text</p>
+      <CalculationInputsView />
     </div>
   );
 }
