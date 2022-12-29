@@ -2,10 +2,10 @@ import { useState } from "react";
 import styles from "./stylingSliderInput.module.scss";
 interface Props {
   title: string;
-  inputfieldPlaceholder: string;
+  placeholder: string;
 }
 
-function SliderInput({ title, inputfieldPlaceholder }: Props) {
+function SliderInput({ title, placeholder }: Props) {
   const [value, setValue] = useState<number | string>("");
 
   const handleOnChange = (event: any) => {
@@ -20,7 +20,7 @@ function SliderInput({ title, inputfieldPlaceholder }: Props) {
           <input
             name="boligpris"
             className={styles.inputNumber}
-            placeholder={inputfieldPlaceholder}
+            placeholder={placeholder}
             type="number"
             min="0"
             id="boligpris"

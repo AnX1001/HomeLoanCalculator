@@ -6,9 +6,9 @@ import styles from "./StylingCalculationInputsView.module.scss";
 function CalculationInputsView() {
   return (
     <div className={styles.wrapper}>
-      <SliderInput inputfieldPlaceholder="Boligpris" title={"Boligens pris"} />
-      <SliderInput inputfieldPlaceholder="Egenkapital" title={"Egenkapital"} />
-      <SliderInput inputfieldPlaceholder="Gjeld" title={"Gjeld"} />
+      <SliderInput placeholder="Boligpris" title={"Boligens pris"} />
+      <SliderInput placeholder="Egenkapital" title={"Egenkapital"} />
+      <SliderInput placeholder="Gjeld" title={"Gjeld"} />
     </div>
   );
 }
