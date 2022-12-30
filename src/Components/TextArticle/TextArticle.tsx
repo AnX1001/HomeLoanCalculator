@@ -4,13 +4,14 @@ interface Props {
   h1Heading: string;
   h2Heading: string;
   paragraph: string;
+  imageElement?: React.ReactNode;
 }
 
-function TextArticle({ h1Heading, h2Heading, paragraph }: Props) {
+function TextArticle({ h1Heading, h2Heading, paragraph, imageElement }: Props) {
   return (
     <div className={styles.wrapper}>
       <h1>{h1Heading}</h1>
-      <slot></slot>
+      {imageElement}
       <h2>{h2Heading}</h2>
       <p>{paragraph}</p>
     </div>

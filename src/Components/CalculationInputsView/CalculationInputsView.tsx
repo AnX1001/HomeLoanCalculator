@@ -9,6 +9,7 @@ function CalculationInputsView() {
     <div className={styles.wrapper}>
       <div className={styles.innerWrapper}>
         <TextArticle
+          imageElement={<p>inject imageElement here</p>}
           h1Heading="Boliglånskalkulatoren"
           h2Heading="Hvor mye kan du få i boliglån"
           paragraph="Dette er avhengig av mange variabler. Men en vanlig kalkulasjon vil ta i betraktning din årsinntekt, gjeld, egenkapital og boligens totalpris."
