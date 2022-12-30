@@ -1,0 +1,63 @@
+@import "../MainStyling/MainStyling";
+
+.h3 {
+  margin-bottom: $spacingFivePx;
+}
+
+.inputGroup {
+  display: grid;
+  width: 100%;
+  justify-content: center;
+}
+
+input {
+  font-size: 12px;
+  width: clamp(190px, 75vw, 300px);
+  height: 27px;
+  padding-left: 8px;
+  border: 1px solid $lightBackground;
+  border-radius: 4px;
+}
+
+.inputSlider {
+  width: clamp(190px, 75vw, 300px);
+  margin-left: 2px;
+  background-color: $customBeige;
+  border: none;
+  margin-top: $spacingFifteenPx;
+  margin-bottom: $spacingFivePx * 2;
+}
+
+.inputSlider::-moz-range-thumb {
+  cursor: grabbing;
+  background-color: $darkBackground;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.inputSlider::-moz-range-track {
+  background-color: $lightgrey;
+  height: 9px;
+  width: clamp(190px, 75vw, 300px);
+  border-radius: 2px;
+}
+
+.inputNumber {
+  box-shadow: $lightShadow;
+}
+
+/* Remove arrows from input type number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}

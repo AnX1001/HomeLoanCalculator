@@ -1,3 +1,4 @@
+import SliderInput from "../SliderInput/SliderInput";
 import styles from "./StylingCalculationInputsView.module.scss";
 
 /* the wrapper grows in height along with content. The width is always as large as window width. */
@@ -5,7 +6,9 @@ import styles from "./StylingCalculationInputsView.module.scss";
 function CalculationInputsView() {
   return (
     <div className={styles.wrapper}>
-      <p>calculationinputsview render</p>
+      <SliderInput placeholder="Boligpris" title={"Boligens pris"} />
+      <SliderInput placeholder="Egenkapital" title={"Egenkapital"} />
+      <SliderInput placeholder="Gjeld" title={"Gjeld"} />
     </div>
   );
 }
