@@ -5,11 +5,23 @@ interface Props {
   placeholder: string;
 }
 
-function SliderInput({ title, placeholder }: Props) {
-  const [value, setValue] = useState<number | string>("");
+/* Ensures that setValue only stores numeric values  */
+const isNumberOrNaN = (value: any) => Number(value);
 
+function SliderInput({ title, placeholder }: Props) {
+  const [value, setValue] = useState<number | null>(null);
+
+  /* event.target.value is set with the slider thumb or directly in the inputfield  */
   const handleOnChange = (event: any) => {
+    if (!Number(event.target.value)) return;
     setValue(event.target.value);
+  };
+
+
+  const handleOnKeyDown = (event: any) => {
+    if (event.key === "Backspace") {
+      setValue(event.target.value.slice(0, -1));
+    }
   };
 
   return (
@@ -21,11 +33,12 @@ function SliderInput({ title, placeholder }: Props) {
             name="boligpris"
             className={styles.inputNumber}
             placeholder={placeholder}
-            type="number"
+            type="text"
             min="0"
             id="boligpris"
-            value={parseInt(value.toString()) ? value : ""}
+            value={value ? value.toString() : ""}
             onChange={handleOnChange}
+            onKeyDown={handleOnKeyDown}
           />
         </label>
 
@@ -33,7 +46,7 @@ function SliderInput({ title, placeholder }: Props) {
           aria-label="velg sum"
           className={styles.inputSlider}
           type="range"
-          min="0"
+          min="1"
           max="100000000"
           step="1000"
           onChange={handleOnChange}
