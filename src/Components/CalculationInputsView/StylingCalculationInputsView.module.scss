@@ -1,6 +1,14 @@
 @import "../MainStyling/MainStyling";
 
 .wrapper {
+  display: grid;
+  justify-content: center;
   background-color: $customBeige;
   padding: $spacingFiftyPx $spacingThirtyPx $spacingThirtyPx $spacingThirtyPx;
+
+  .innerWrapper {
+     max-width: 450px;
+    display: grid;
+    justify-content: center;
+  }
 }
