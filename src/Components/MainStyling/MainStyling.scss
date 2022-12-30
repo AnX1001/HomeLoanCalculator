@@ -8,6 +8,10 @@ body {
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* Colors */
 
 $darkBackground: #376174;
