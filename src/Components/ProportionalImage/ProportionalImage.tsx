@@ -6,7 +6,7 @@ interface Props {
 function ProportionalImage({ alt, src }: Props) {
   return (
     <>
-      <img alt={alt} src={src} />
+      <img data-testid="image" alt={alt} src={src} />
     </>
   );
 }
