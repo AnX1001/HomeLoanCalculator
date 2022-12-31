@@ -1,0 +1,51 @@
+@import "../MainStyling/MainStyling";
+
+.wrapper {
+    color: $customYellow;
+    justify-content: center;
+    max-width: 450px;
+    display: grid;
+}
+
+
+
+.largeHeading {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+margin: 0;
+text-align: center;
+}
+
+h2 {
+  font-family: "Red Hat Text", sans-serif;
+  line-height: 150%;
+  font-size: 22.5px, 1.25rem;
+}
+
+
+.smallHeading {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+
+}
+
+.smallerHeading {
+  font-size: 0.8rem;
+  line-height: 150%;
+  font-weight: 500;
+}
+
+p {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1rem;
+  line-height: 150%;
+  font-weight: 400;
+}
+
+.smallerParagraph {
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 0.8rem;
+  line-height: 150%;
+  font-weight: 400;
+}

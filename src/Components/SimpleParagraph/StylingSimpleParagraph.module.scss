@@ -1,0 +1,16 @@
+@import "../MainStyling/MainStyling";
+
+.wrapper {
+    color: $customYellow;
+margin-top: $spacingFiftyPx;
+    justify-content: center;
+    max-width: 450px;
+    display: grid;
+    justify-content: center;
+
+    .smallerHeading {
+        font-size: 0.8rem;
+        line-height: 150%;
+        font-weight: 500;
+    }
+}
