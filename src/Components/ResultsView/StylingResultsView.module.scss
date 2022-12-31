@@ -3,4 +3,7 @@
 .wrapper {
   padding: $spacingFiftyPx $spacingThirtyPx $spacingThirtyPx $spacingThirtyPx;
   background-color: $darkBackground;
+  display: grid;
+  justify-content: center;
+
 }
