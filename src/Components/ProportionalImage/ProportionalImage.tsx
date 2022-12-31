@@ -1,3 +1,5 @@
+import styles from "./StylingProportionalImage.module.scss";
+
 interface Props {
   src: string;
   alt: string;
@@ -6,7 +8,7 @@ interface Props {
 function ProportionalImage({ alt, src }: Props) {
   return (
     <>
-      <img data-testid="image" alt={alt} src={src} />
+      <img className={styles.image} data-testid="image" alt={alt} src={src} />
     </>
   );
 }
