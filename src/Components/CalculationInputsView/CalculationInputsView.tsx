@@ -20,6 +20,7 @@ function CalculationInputsView() {
         <SliderInput placeholder="Boligpris" title={"Boligens pris"} />
         <SliderInput placeholder="Egenkapital" title={"Egenkapital"} />
         <SliderInput placeholder="Gjeld" title={"Gjeld"} />
+        <SliderInput placeholder="Årslønn brutto" title={"Årslønn brutto"} />
       </div>
     </div>
   );
