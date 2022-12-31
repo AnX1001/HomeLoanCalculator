@@ -1,5 +1,6 @@
 function ProportionalImage() {
-  return <p>ProportionalImage</p>;
-}
+  return (
+    
+  )
 
 export default ProportionalImage;
