@@ -3,20 +3,21 @@ import styles from "./stylingSliderInput.module.scss";
 interface Props {
   title: string;
   placeholder: string;
+  onChangeInputValue: (value: string) => void;
 }
 
 /* Ensures that setValue only stores numeric values  */
 const isNumberOrNaN = (value: any) => Number(value);
 
-function SliderInput({ title, placeholder }: Props) {
+function SliderInput({ title, placeholder, onChangeInputValue }: Props) {
   const [value, setValue] = useState<number | null>(null);
 
   /* event.target.value is set with the slider thumb or directly in the inputfield  */
   const handleOnChange = (event: any) => {
     if (!Number(event.target.value)) return;
     setValue(event.target.value);
+    onChangeInputValue(event.target.value);
   };
-
 
   const handleOnKeyDown = (event: any) => {
     if (event.key === "Backspace") {
