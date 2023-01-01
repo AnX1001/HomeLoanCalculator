@@ -7,12 +7,12 @@ function ResultsView() {
     <div className={styles.wrapper}>
       <CalculationResults
         smallHeading="Innvilget lån"
-        largeHeading="99.0000"
+        largeHeading="324234234"
         smallerHeading={"Husk at:"}
       />
       <CalculationResults
         smallHeading="Ditt lånebehov"
-        largeHeading="99.0000"
+        largeHeading="3423423423"
         smallerHeading={"Husk at:"}
       />
       <SimpleParagraph smallerHeading="Husk at:" />

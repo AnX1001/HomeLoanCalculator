@@ -6,22 +6,34 @@ import Logo from "./Logo.svg";
 import { useState, useEffect } from "react";
 /* the wrapper grows in height along with content. The width is always as large as window width. */
 
-interface CalculaterInput {
-  boligpris: number | null;
-  egenkapital: number | null;
-  gjeld: number | null;
-  inntekt: number | null;
+export interface AllInputStates {
+  boligpris: string | number;
+  egenkapital: string | number;
+  gjeld: string | number;
+  inntekt: string | number;
 }
 
-function CalculationInputsView() {
+function CalculationInputsView({
+  onChange,
+}: {
+  onChange: (updatedStates: any) => void;
+}) {
   const [boligpris, setBoligPris] = useState<number | string>("");
   const [egenkapital, setEgenkapital] = useState<number | string>("");
   const [gjeld, setGjeld] = useState<number | string>("");
   const [inntekt, setInntekt] = useState<number | string>("");
 
+  const allinputStates: AllInputStates = {
+    boligpris,
+    egenkapital,
+    gjeld,
+    inntekt,
+  };
+
   useEffect(() => {
+    onChange(allinputStates);
     console.log("running calculation");
-  }, [boligpris, egenkapital, gjeld, inntekt]);
+  }, [boligpris, inntekt, egenkapital, gjeld]);
 
   return (
     <div className={styles.wrapper}>
