@@ -2,17 +2,24 @@ import CalculationResults from "../CalculationResults/CalculationResults";
 import styles from "./StylingResultsView.module.scss";
 import SimpleParagraph from ".././SimpleParagraph/SimpleParagraph";
 
-function ResultsView() {
+interface ResultsViewProps {
+  lanebehov: string | number;
+  innvilgetLan: string | number;
+}
+
+function ResultsView({ lanebehov, innvilgetLan }: ResultsViewProps) {
+  //Todo: document this part: function ResultsView({lanebehovNumber}: {lanebehovNumber: string})
+
   return (
     <div className={styles.wrapper}>
       <CalculationResults
         smallHeading="Innvilget lån"
-        largeHeading="324234234"
+        largeHeading={innvilgetLan}
         smallerHeading={"Husk at:"}
       />
       <CalculationResults
         smallHeading="Ditt lånebehov"
-        largeHeading="3423423423"
+        largeHeading={lanebehov}
         smallerHeading={"Husk at:"}
       />
       <SimpleParagraph smallerHeading="Husk at:" />

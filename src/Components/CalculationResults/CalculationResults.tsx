@@ -1,10 +1,10 @@
 import styles from './StylingCalculationResults.module.scss'
 
 interface Props {
-    smallHeading: string;
-    largeHeading: string;
-    smallerHeading: string;
-    SimpleParagraph?: React.ReactNode;
+  smallHeading: string;
+  largeHeading: string | number;
+  smallerHeading: string;
+  SimpleParagraph?: React.ReactNode;
 }
 
 function CalculationResults({ smallHeading, largeHeading, SimpleParagraph }: Props) {
