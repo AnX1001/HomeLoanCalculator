@@ -47,12 +47,13 @@ function App() {
     getUpdatedLanebehov();
   }, [allInputValues]);
 
+
   return (
     <div className="App">
       <CalculationInputsView onChange={getAllValues} />
       <ResultsView
-        lanebehov={lanebehov.toLocaleString("no-NO")}
-        innvilgetLan={innvilgetLan.toLocaleString("no-NO")}
+        lanebehov={lanebehov < 0 ? 0 : lanebehov.toLocaleString("no-NO")}
+        innvilgetLan={innvilgetLan < 0 ? 0 : innvilgetLan.toLocaleString("no-NO")}
       />
     </div>
   );
