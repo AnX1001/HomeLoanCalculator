@@ -1,6 +1,7 @@
 import CalculationResults from "../CalculationResults/CalculationResults";
 import styles from "./StylingResultsView.module.scss";
 import SimpleParagraph from ".././SimpleParagraph/SimpleParagraph";
+import { array } from "yargs";
 
 interface ResultsViewProps {
   lanebehov: string | number;

@@ -25,6 +25,7 @@ function SliderInput({ title, placeholder, onChangeInputValue }: Props) {
     }
   };
   const formattedValue = Number(value).toLocaleString("no-NO")
+
   return (
     <>
       <div className={styles.inputGroup}>
