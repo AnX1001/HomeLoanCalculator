@@ -3,7 +3,6 @@ import styles from './StylingCalculationResults.module.scss'
 interface Props {
   smallHeading: string;
   largeHeading: string | number;
-  smallerHeading: string;
   SimpleParagraph?: React.ReactNode;
 }
 
