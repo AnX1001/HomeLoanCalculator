@@ -10,18 +10,18 @@ interface Props {
 const isNumberOrNaN = (value: any) => Number(value);
 
 function SliderInput({ title, placeholder, onChangeInputValue }: Props) {
-  const [value, setValue] = useState<number | null>(null);
+  const [value, setValue] = useState<number | string | null>(null);
 
   /* event.target.value is set with the slider thumb or directly in the inputfield  */
-  const handleOnChange = (event: any) => {
+  const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (!Number(event.target.value)) return;
     setValue(event.target.value);
     onChangeInputValue(event.target.value);
   };
 
-  const handleOnKeyDown = (event: any) => {
+  const handleOnKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Backspace") {
-      setValue(event.target.value.slice(0, -1));
+      setValue((event.target as HTMLInputElement).value?.slice(0, -1));
     }
   };
 
