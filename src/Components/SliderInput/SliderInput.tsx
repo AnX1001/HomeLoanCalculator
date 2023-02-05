@@ -24,7 +24,6 @@ function SliderInput({ title, placeholder, onChangeInputValue }: Props) {
       setValue(event.target.value.slice(0, -1));
     }
   };
-  const formattedValue = Number(value).toLocaleString("no-NO")
 
   return (
     <>
@@ -38,8 +37,9 @@ function SliderInput({ title, placeholder, onChangeInputValue }: Props) {
             type="text"
             min="0"
             id="boligpris"
-            value={value ? formattedValue : ''}
+            value={value ? value : ""}
             onKeyDown={handleOnKeyDown}
+            onChange={handleOnChange}
           />
         </label>
 
