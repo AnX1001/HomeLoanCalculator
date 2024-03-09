@@ -7,10 +7,10 @@ import { useState, useEffect } from "react";
 /* the wrapper grows in height along with content. The width is always as large as window width. */
 
 export interface AllInputStates {
-  boligpris: string | number;
-  egenkapital: string | number;
-  gjeld: string | number;
-  inntekt: string | number;
+  propertyPrice: string | number;
+  equity: string | number;
+  debt: string | number;
+  income: string | number;
 }
 
 function CalculationInputsView({
@@ -18,22 +18,21 @@ function CalculationInputsView({
 }: {
   onChange: (updatedStates: any) => void;
 }) {
-  const [boligpris, setBoligPris] = useState<number | string>("");
-  const [egenkapital, setEgenkapital] = useState<number | string>("");
-  const [gjeld, setGjeld] = useState<number | string>("");
-  const [inntekt, setInntekt] = useState<number | string>("");
+  const [propertyPrice, setPropertyPrice] = useState<number | string>("");
+  const [equity, setEquity] = useState<number | string>("");
+  const [debt, setDebt] = useState<number | string>("");
+  const [income, setIncome] = useState<number | string>("");
 
   const allinputStates: AllInputStates = {
-    boligpris,
-    egenkapital,
-    gjeld,
-    inntekt,
+    propertyPrice,
+    equity,
+    debt,
+    income,
   };
 
   useEffect(() => {
     onChange(allinputStates);
-    console.log("running calculation");
-  }, [boligpris, inntekt, egenkapital, gjeld]);
+  }, [propertyPrice, equity, income, debt]);
 
   return (
     <div className={styles.wrapper}>
@@ -47,22 +46,22 @@ function CalculationInputsView({
           paragraph="Dette er avhengig av mange variabler. Men en vanlig kalkulasjon vil ta i betraktning din årsinntekt, gjeld, egenkapital og boligens totalpris."
         />
         <SliderInput
-          onChangeInputValue={setBoligPris}
+          onChangeInputValue={setPropertyPrice}
           placeholder="Boligpris"
           title={"Boligens pris"}
         />
         <SliderInput
-          onChangeInputValue={setEgenkapital}
+          onChangeInputValue={setEquity}
           placeholder="Egenkapital"
           title={"Egenkapital"}
         />
         <SliderInput
-          onChangeInputValue={setGjeld}
+          onChangeInputValue={setDebt}
           placeholder="Gjeld"
           title={"Gjeld"}
         />
         <SliderInput
-          onChangeInputValue={setInntekt}
+          onChangeInputValue={setIncome}
           placeholder="Årslønn brutto"
           title={"Årslønn brutto"}
         />

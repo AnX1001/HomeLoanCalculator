@@ -4,22 +4,22 @@ import SimpleParagraph from ".././SimpleParagraph/SimpleParagraph";
 
 
 interface ResultsViewProps {
-  lanebehov: number;
-  innvilgetLan: number;
+  loanNeed: number;
+  eligibleLoan: number;
 }
 
-function ResultsView({ lanebehov, innvilgetLan }: ResultsViewProps) {
+function ResultsView({ loanNeed, eligibleLoan }: ResultsViewProps) {
   //Todo: document this part: function ResultsView({lanebehovNumber}: {lanebehovNumber: string})
 
   return (
     <div className={styles.wrapper}>
       <CalculationResults
         smallHeading="Innvilget lån"
-        largeHeading={innvilgetLan}
+        largeHeading={eligibleLoan}
       />
       <CalculationResults
         smallHeading="Ditt lånebehov"
-        largeHeading={lanebehov}
+        largeHeading={loanNeed}
       />
       <SimpleParagraph smallerHeading="Husk at:" />
     </div>

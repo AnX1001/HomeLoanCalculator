@@ -1,59 +1,51 @@
-import { useState, useEffect } from "react";
+
+import { useState } from "react";
 import CalculationInputsView, {
   AllInputStates,
 } from "./Components/CalculationInputsView/CalculationInputsView";
 import "./Components/MainStyling/MainStyling.scss";
 import ResultsView from "./Components/ResultsView/ResultsView";
-import { CalculateInnvilgetLan } from "./Components/SliderInput/CalculateInnvilgetLan";
-import { CalculateLanebehov } from "./Components/SliderInput/CalculateLanebehov";
+import { CalculateEligibleLoan } from "./Components/SliderInput/CalculateEligibleLoan";
+import { CalculateLoanNeed } from "./Components/SliderInput/CalculateLoanNeed";
 
 function App() {
-  const [allInputValues, setAllInnputValues] = useState<AllInputStates>({
-    boligpris: "",
-    egenkapital: "",
-    gjeld: "",
-    inntekt: "",
+  const [loanInputs, setLoanInputs] = useState<AllInputStates>({
+    propertyPrice: "",
+    equity: "",
+    debt: "",
+    income: "",
   });
 
-  const [innvilgetLan, setInnvilgetLan] = useState<number>(0);
-  const [lanebehov, setLanebehov] = useState<number>(0);
+  const [eligibleLoan, setEligibleLoan] = useState<number>(0);
+  const [loanNeed, setLoanNeed] = useState<number>(0);
 
-  // getAllvalues that is retrieved from the child components state
-  const getAllValues = (updatedState: any) => {
-    setAllInnputValues(updatedState);
-    console.log(allInputValues);
+  const getAllValues = (updatedState: AllInputStates) => {
+    setLoanInputs(updatedState); // Schedule the state update
+    updateLoanCalculations(updatedState); // Immediately use the updated state for calculations
   };
 
-  const getUpdateInnvilgetLan = () => {
-    const newInnvilgetLan = CalculateInnvilgetLan({
-      gjeld: Number(allInputValues.gjeld),
-      inntekt: Number(allInputValues.inntekt),
+
+  const updateLoanCalculations = (updatedState: AllInputStates) => {
+    const updatedEligibleLoan = CalculateEligibleLoan({
+      debt: Number(updatedState.debt),
+      income: Number(updatedState.income),
     });
+    setEligibleLoan(updatedEligibleLoan);
 
-    setInnvilgetLan(newInnvilgetLan);
-  };
-
-  const getUpdatedLanebehov = () => {
-    const newLanebehov = CalculateLanebehov({
-      boligpris: Number(allInputValues.boligpris),
-      egenkapital: Number(allInputValues.egenkapital),
+    const updatedLoanNeed = CalculateLoanNeed({
+      propertyPrice: Number(updatedState.propertyPrice),
+      equity: Number(updatedState.equity),
     });
-
-    setLanebehov(newLanebehov);
+    setLoanNeed(updatedLoanNeed);
   };
-
-  useEffect(() => {
-    getUpdateInnvilgetLan();
-    getUpdatedLanebehov();
-  }, [allInputValues]);
 
 
   return (
     <div className="App">
       <CalculationInputsView onChange={getAllValues} />
       <ResultsView
-        lanebehov={lanebehov < 0 ? 0 : lanebehov}
-        innvilgetLan={innvilgetLan < 0 ? 0 : innvilgetLan}
+        loanNeed={loanNeed}
+        eligibleLoan={eligibleLoan}
       />
     </div>
   );

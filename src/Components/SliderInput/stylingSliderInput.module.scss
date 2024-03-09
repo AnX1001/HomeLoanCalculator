@@ -23,11 +23,13 @@ input {
   margin-top: $spacingFifteenPx;
   margin-bottom: $spacingFivePx * 2;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 /* Chrome, safari and opera */
 .inputSlider {
   -webkit-appearance: none;
+  appearance: none;
   background-color: $lightgrey;
   height: 12px;
   width: 90%;
