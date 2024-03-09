@@ -4,8 +4,8 @@ import SimpleParagraph from ".././SimpleParagraph/SimpleParagraph";
 
 
 interface ResultsViewProps {
-  lanebehov: string | number;
-  innvilgetLan: string | number;
+  lanebehov: number;
+  innvilgetLan: number;
 }
 
 function ResultsView({ lanebehov, innvilgetLan }: ResultsViewProps) {
