@@ -15,8 +15,8 @@ function App() {
     inntekt: "",
   });
 
-  const [innvilgetLan, setInnvilgetLan] = useState<string | number>("");
-  const [lanebehov, setLanebehov] = useState<string | number>("");
+  const [innvilgetLan, setInnvilgetLan] = useState<number>(0);
+  const [lanebehov, setLanebehov] = useState<number>(0);
 
   // getAllvalues that is retrieved from the child components state
   const getAllValues = (updatedState: any) => {
@@ -52,8 +52,8 @@ function App() {
     <div className="App">
       <CalculationInputsView onChange={getAllValues} />
       <ResultsView
-        lanebehov={lanebehov < 0 ? 0 : lanebehov.toLocaleString("no-NO")}
-        innvilgetLan={innvilgetLan < 0 ? 0 : innvilgetLan.toLocaleString("no-NO")}
+        lanebehov={lanebehov < 0 ? 0 : lanebehov}
+        innvilgetLan={innvilgetLan < 0 ? 0 : innvilgetLan}
       />
     </div>
   );
