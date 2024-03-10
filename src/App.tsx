@@ -20,7 +20,6 @@ function App() {
   const [loanNeed, setLoanNeed] = useState<number>(0);
 
   const getAllValues = (updatedState: FinancialDetailsType) => {
-console.log(updatedState)
     setLoanInputs(updatedState); // Schedule the state update
     updateLoanCalculations(updatedState); // Immediately use the updated state for calculations
   };
