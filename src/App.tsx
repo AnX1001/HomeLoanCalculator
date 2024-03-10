@@ -1,12 +1,7 @@
 
 import { useState } from "react";
-import CalculationInputsView, {
-  FinancialDetailsType,
-} from "./Components/CalculationInputsView/CalculationInputsView";
+import { CalculationInputsView, ResultsView, CalculateLoanNeed, CalculateEligibleLoan, FinancialDetailsType } from './ImportIndex';
 import "./Components/MainStyling/MainStyling.scss";
-import ResultsView from "./Components/ResultsView/ResultsView";
-import { CalculateEligibleLoan } from "./Components/SliderInput/CalculateEligibleLoan";
-import { CalculateLoanNeed } from "./Components/SliderInput/CalculateLoanNeed";
 
 function App() {
   const [loanInputs, setLoanInputs] = useState<FinancialDetailsType>({
