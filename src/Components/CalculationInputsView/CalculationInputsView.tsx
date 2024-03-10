@@ -7,10 +7,10 @@ import { useState, useEffect } from "react";
 /* the wrapper grows in height along with content. The width is always as large as window width. */
 
 export interface AllInputStates {
-  propertyPrice: string | number;
-  equity: string | number;
-  debt: string | number;
-  income: string | number;
+  propertyPrice:  number;
+  equity: number;
+  debt:  number;
+  income:   number;
 }
 
 function CalculationInputsView({
@@ -18,10 +18,10 @@ function CalculationInputsView({
 }: {
   onChange: (updatedStates: any) => void;
 }) {
-  const [propertyPrice, setPropertyPrice] = useState<number | string>("");
-  const [equity, setEquity] = useState<number | string>("");
-  const [debt, setDebt] = useState<number | string>("");
-  const [income, setIncome] = useState<number | string>("");
+  const [propertyPrice, setPropertyPrice] = useState<number>(0);
+  const [equity, setEquity] = useState<number>(0);
+  const [debt, setDebt] = useState<number>(0);
+  const [income, setIncome] = useState<number  >(0);
 
   const allinputStates: AllInputStates = {
     propertyPrice,

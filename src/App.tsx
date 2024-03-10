@@ -10,10 +10,10 @@ import { CalculateLoanNeed } from "./Components/SliderInput/CalculateLoanNeed";
 
 function App() {
   const [loanInputs, setLoanInputs] = useState<AllInputStates>({
-    propertyPrice: "",
-    equity: "",
-    debt: "",
-    income: "",
+    propertyPrice: 0,
+    equity: 0,
+    debt: 0,
+    income: 0,
   });
 
   const [eligibleLoan, setEligibleLoan] = useState<number>(0);

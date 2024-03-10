@@ -3,18 +3,18 @@ import styles from "./stylingSliderInput.module.scss";
 interface Props {
   title: string;
   placeholder: string;
-  onChangeInputValue: (value: string) => void;
+  onChangeInputValue: (value: number) => void;
 }
 
 
 
 function SliderInput({ title, placeholder, onChangeInputValue }: Props) {
-  const [value, setValue] = useState<number | string | null>(null);
+  const [value, setValue] = useState<number>(0);
 
   /* event.target.value is set with the slider thumb or directly in the inputfield  */
   const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value);
-    onChangeInputValue(event.target.value);
+    setValue(Number(event.target.value));
+    onChangeInputValue(Number(event.target.value));
   };
 
 
