@@ -41,7 +41,7 @@ function SliderInput({ title, placeholder, onChangeInputValue }: Props) {
           className={styles.inputSlider}
           type="range"
           min="1"
-          max="1000000" // max range
+          max="10000000" // max range
           step="100"
           onChange={handleOnChange}
         />
