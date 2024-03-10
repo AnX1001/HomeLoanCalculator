@@ -6,11 +6,11 @@ import Logo from "./Logo.svg";
 import { useState, useEffect } from "react";
 /* the wrapper grows in height along with content. The width is always as large as window width. */
 
-export interface AllInputStates {
-  propertyPrice: string | number;
-  equity: string | number;
-  debt: string | number;
-  income: string | number;
+export interface FinancialDetailsType {
+  propertyPrice: number;
+  equity: number;
+  debt: number;
+  income: number;
 }
 
 function CalculationInputsView({
@@ -18,21 +18,20 @@ function CalculationInputsView({
 }: {
   onChange: (updatedStates: any) => void;
 }) {
-  const [propertyPrice, setPropertyPrice] = useState<number | string>("");
-  const [equity, setEquity] = useState<number | string>("");
-  const [debt, setDebt] = useState<number | string>("");
-  const [income, setIncome] = useState<number | string>("");
 
-  const allinputStates: AllInputStates = {
-    propertyPrice,
-    equity,
-    debt,
-    income,
+  //  a single state object for all financial details ensures the entire updated state is passed back to App.tsx
+  const [financialDetails, setFinancialDetails] = useState<FinancialDetailsType>({
+    propertyPrice: 0,
+    equity: 0,
+    debt: 0,
+    income: 0,
+  });
+
+  const handleInputChange = (name: keyof FinancialDetailsType, value: number) => {
+    const updatedDetails = { ...financialDetails, [name]: value };
+    setFinancialDetails(updatedDetails);
+    onChange(updatedDetails); // Pass the complete, updated state back to the App
   };
-
-  useEffect(() => {
-    onChange(allinputStates);
-  }, [propertyPrice, equity, income, debt]);
 
   return (
     <div className={styles.wrapper}>
@@ -46,22 +45,22 @@ function CalculationInputsView({
           paragraph="Dette er avhengig av mange variabler. Men en vanlig kalkulasjon vil ta i betraktning din årsinntekt, gjeld, egenkapital og boligens totalpris."
         />
         <SliderInput
-          onChangeInputValue={setPropertyPrice}
+          onChangeInputValue={value => handleInputChange('propertyPrice', value)}
           placeholder="Boligpris"
           title={"Boligens pris"}
         />
         <SliderInput
-          onChangeInputValue={setEquity}
+          onChangeInputValue={value => handleInputChange('equity', value)}
           placeholder="Egenkapital"
           title={"Egenkapital"}
         />
         <SliderInput
-          onChangeInputValue={setDebt}
+          onChangeInputValue={value => handleInputChange('debt', value)}
           placeholder="Gjeld"
           title={"Gjeld"}
         />
         <SliderInput
-          onChangeInputValue={setIncome}
+          onChangeInputValue={value => handleInputChange('income', value)}
           placeholder="Årslønn brutto"
           title={"Årslønn brutto"}
         />
