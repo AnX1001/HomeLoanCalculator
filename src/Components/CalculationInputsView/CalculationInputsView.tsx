@@ -1,10 +1,6 @@
-import ProportionalImage from "../ProportionalImage/ProportionalImage";
-import SliderInput from "../SliderInput/SliderInput";
-import TextArticle from "../TextArticle/TextArticle";
-import styles from "./StylingCalculationInputsView.module.scss";
-import Logo from "./Logo.svg";
+import styles from "./StylingCalculationInputsView.module.scss"
 import { useState } from "react";
-
+import { ProportionalImage, SliderInput, TextArticle, Logo } from './index';
 
 export interface FinancialDetailsType {
   propertyPrice: number;
@@ -33,6 +29,13 @@ function CalculationInputsView({
     onChange(updatedDetails); // Pass the complete, updated state back to the App
   };
 
+  const sliderInputs = [
+    { name: 'propertyPrice', title: 'Boligens pris', placeholder: 'Boligpris' },
+    { name: 'equity', title: 'Egenkapital', placeholder: 'Egenkapital' },
+    { name: 'debt', title: 'Gjeld', placeholder: 'Gjeld' },
+    { name: 'income', title: 'Årslønn brutto', placeholder: 'Årslønn brutto' },
+  ]
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.innerWrapper}>
@@ -44,26 +47,10 @@ function CalculationInputsView({
           h2Heading="Hvor mye kan du få i boliglån"
           paragraph="Dette er avhengig av mange variabler. Men en vanlig kalkulasjon vil ta i betraktning din årsinntekt, gjeld, egenkapital og boligens totalpris."
         />
-        <SliderInput
-          onChangeInputValue={value => handleInputChange('propertyPrice', value)}
-          placeholder="Boligpris"
-          title={"Boligens pris"}
-        />
-        <SliderInput
-          onChangeInputValue={value => handleInputChange('equity', value)}
-          placeholder="Egenkapital"
-          title={"Egenkapital"}
-        />
-        <SliderInput
-          onChangeInputValue={value => handleInputChange('debt', value)}
-          placeholder="Gjeld"
-          title={"Gjeld"}
-        />
-        <SliderInput
-          onChangeInputValue={value => handleInputChange('income', value)}
-          placeholder="Årslønn brutto"
-          title={"Årslønn brutto"}
-        />
+
+        {sliderInputs.map(({ name, title, placeholder }) => (
+          <SliderInput key={name} title={title} placeholder={placeholder} onChangeInputValue={value => handleInputChange(name as keyof FinancialDetailsType, value)} />
+        ))}
       </div>
     </div>
   );
