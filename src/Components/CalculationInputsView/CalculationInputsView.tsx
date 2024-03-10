@@ -3,8 +3,8 @@ import SliderInput from "../SliderInput/SliderInput";
 import TextArticle from "../TextArticle/TextArticle";
 import styles from "./StylingCalculationInputsView.module.scss";
 import Logo from "./Logo.svg";
-import { useState, useEffect } from "react";
-/* the wrapper grows in height along with content. The width is always as large as window width. */
+import { useState } from "react";
+
 
 export interface FinancialDetailsType {
   propertyPrice: number;
