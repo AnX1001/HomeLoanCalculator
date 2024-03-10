@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import CalculationInputsView, {
-  AllInputStates,
+  FinancialDetailsType,
 } from "./Components/CalculationInputsView/CalculationInputsView";
 import "./Components/MainStyling/MainStyling.scss";
 import ResultsView from "./Components/ResultsView/ResultsView";
@@ -9,7 +9,7 @@ import { CalculateEligibleLoan } from "./Components/SliderInput/CalculateEligibl
 import { CalculateLoanNeed } from "./Components/SliderInput/CalculateLoanNeed";
 
 function App() {
-  const [loanInputs, setLoanInputs] = useState<AllInputStates>({
+  const [loanInputs, setLoanInputs] = useState<FinancialDetailsType>({
     propertyPrice: 0,
     equity: 0,
     debt: 0,
@@ -19,13 +19,14 @@ function App() {
   const [eligibleLoan, setEligibleLoan] = useState<number>(0);
   const [loanNeed, setLoanNeed] = useState<number>(0);
 
-  const getAllValues = (updatedState: AllInputStates) => {
+  const getAllValues = (updatedState: FinancialDetailsType) => {
+console.log(updatedState)
     setLoanInputs(updatedState); // Schedule the state update
     updateLoanCalculations(updatedState); // Immediately use the updated state for calculations
   };
 
 
-  const updateLoanCalculations = (updatedState: AllInputStates) => {
+  const updateLoanCalculations = (updatedState: FinancialDetailsType) => {
     const updatedEligibleLoan = CalculateEligibleLoan({
       debt: Number(updatedState.debt),
       income: Number(updatedState.income),
