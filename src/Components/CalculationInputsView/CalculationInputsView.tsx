@@ -16,7 +16,7 @@ export interface FinancialDetailsType {
 function CalculationInputsView({
   onChange,
 }: {
-  onChange: (updatedStates: any) => void;
+  onChange: (updatedStates: FinancialDetailsType) => void;
 }) {
 
   //  a single state object for all financial details ensures the entire updated state is passed back to App.tsx

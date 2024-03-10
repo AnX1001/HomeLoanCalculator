@@ -4,8 +4,8 @@ import SimpleParagraph from ".././SimpleParagraph/SimpleParagraph";
 
 
 interface ResultsViewProps {
-  loanNeed: any;
-  eligibleLoan: any;
+  loanNeed: number;
+  eligibleLoan: number;
 }
 
 function ResultsView({ loanNeed, eligibleLoan }: ResultsViewProps) {
