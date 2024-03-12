@@ -12,7 +12,7 @@ $fontSecondary:  "Poppins", sans-serif;
 
 
 
-.largeHeading {
+.amount {
   font-family: $fontSecondary;
   font-size: 32px;
 margin: 0;
@@ -26,18 +26,14 @@ h2 {
 }
 
 
-.smallHeading {
+.title {
   font-family: $fontPrimary;
   font-size: 1rem;
   text-align: center;
 
 }
 
-.smallerHeading {
-  font-size: 0.8rem;
-  line-height: 150%;
-  font-weight: 500;
-}
+
 
 p {
   font-family: $fontPrimary;
