@@ -1,5 +1,8 @@
 @import "../MainStyling/MainStyling";
 
+$fontPrimary: "Red Hat Text", sans-serif;
+$fontSecondary:  "Poppins", sans-serif;
+
 .wrapper {
     color: $customYellow;
     justify-content: center;
@@ -10,21 +13,21 @@
 
 
 .largeHeading {
-  font-family: "Poppins", sans-serif;
+  font-family: $fontSecondary;
   font-size: 32px;
 margin: 0;
 text-align: center;
 }
 
 h2 {
-  font-family: "Red Hat Text", sans-serif;
+  font-family: $fontPrimary;
   line-height: 150%;
   font-size: 22.5px, 1.25rem;
 }
 
 
 .smallHeading {
-  font-family: "Red Hat Text", sans-serif;
+  font-family: $fontPrimary;
   font-size: 1rem;
   text-align: center;
 
@@ -37,14 +40,14 @@ h2 {
 }
 
 p {
-  font-family: "Red Hat Text", sans-serif;
+  font-family: $fontPrimary;
   font-size: 1rem;
   line-height: 150%;
   font-weight: 400;
 }
 
 .smallerParagraph {
-  font-family: "Red Hat Text", sans-serif;
+  font-family: $fontPrimary;
   font-size: 0.8rem;
   line-height: 150%;
   font-weight: 400;
