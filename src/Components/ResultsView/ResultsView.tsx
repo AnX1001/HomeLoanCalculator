@@ -15,11 +15,11 @@ function ResultsView({ loanNeed, eligibleLoan }: ResultsViewProps) {
     <div className={styles.wrapper}>
       <CalculationResults
         smallHeading="Innvilget lån"
-        calculationSum={eligibleLoan < 0 ? 0 : eligibleLoan}
+        totalAmount={eligibleLoan < 0 ? 0 : eligibleLoan}
       />
       <CalculationResults
         smallHeading="Ditt lånebehov"
-        calculationSum={loanNeed < 0 ? 0 : loanNeed}
+        totalAmount={loanNeed < 0 ? 0 : loanNeed}
       />
       <SimpleParagraph smallerHeading="Husk at:" />
     </div>
