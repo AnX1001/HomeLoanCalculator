@@ -1,13 +1,13 @@
 @import "../MainStyling/MainStyling";
 
 $fontPrimary: "Red Hat Text", sans-serif;
-$fontSecondary:  "Poppins", sans-serif;
+$fontSecondary: "Poppins", sans-serif;
 
 .wrapper {
-    color: $customYellow;
-    justify-content: center;
-    max-width: 450px;
-    display: grid;
+  color: $customYellow;
+  justify-content: center;
+  max-width: 450px;
+  display: grid;
 }
 
 
@@ -15,8 +15,8 @@ $fontSecondary:  "Poppins", sans-serif;
 .amount {
   font-family: $fontSecondary;
   font-size: 32px;
-margin: 0;
-text-align: center;
+  margin: 0;
+  text-align: center;
 }
 
 h2 {
