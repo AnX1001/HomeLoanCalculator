@@ -1,15 +1,15 @@
 @import "../MainStyling/MainStyling";
 
 .wrapper {
-    color: $customYellow;
-    margin-top: $spacing-xxl;
-    justify-content: center;
-    max-width: 450px;
-    display: grid;
-    justify-content: center;
+  color: $customYellow;
+  margin-top: $spacing-xxl;
+  justify-content: center;
+  max-width: 450px;
+  display: grid;
+  justify-content: center;
 
-    .heading {
-        line-height: 5%;
-        font-weight: $font-weight-medium;
-    }
+  .heading {
+    line-height: 5%;
+    font-weight: $font-weight-medium;
+  }
 }

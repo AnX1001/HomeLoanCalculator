@@ -15,13 +15,12 @@ body {
 /* Colors */
 
 $darkBackground: #376174;
-$lightBackground: #5291A6;
-$customYellow: #FFDE9F;
-$customBeige: #FDF9F2;
-$lightgrey: #D9D9D9;
+$lightBackground: #5291a6;
+$customYellow: #ffde9f;
+$customBeige: #fdf9f2;
+$lightgrey: #d9d9d9;
 
 $lightShadow: 0px 3px 5px 1px $lightgrey;
-
 
 /* Spacing: 5, 10, 15, 30, 40, 50px in height  */
 $spacing-xs: 5px;
@@ -34,7 +33,6 @@ $spacing-xxl: 50px;
 /* Font weight: 400, 500 */
 $font-weight-normal: 400;
 $font-weight-medium: 500;
-
 
 /* Typography using fonts Poppins and Red Hat Text from Google Fonts */
 
@@ -54,7 +52,7 @@ h2 {
 h3 {
   font-family: "Red Hat Text", sans-serif;
   font-size: 1rem;
-  line-height: 150%
+  line-height: 150%;
 }
 
 h4 {

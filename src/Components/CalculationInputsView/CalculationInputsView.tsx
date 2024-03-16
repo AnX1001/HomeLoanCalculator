@@ -1,6 +1,6 @@
-import styles from "./StylingCalculationInputsView.module.scss"
+import styles from "./StylingCalculationInputsView.module.scss";
 import { useState } from "react";
-import { ProportionalImage, SliderInput, TextArticle, Logo } from './index';
+import { ProportionalImage, SliderInput, TextArticle, Logo } from "./index";
 
 export interface FinancialDetailsType {
   propertyPrice: number;
@@ -14,27 +14,30 @@ function CalculationInputsView({
 }: {
   onChange: (updatedStates: FinancialDetailsType) => void;
 }) {
-
   //  a single state object for all financial details ensures the entire updated state is passed back to App.tsx
-  const [financialDetails, setFinancialDetails] = useState<FinancialDetailsType>({
-    propertyPrice: 0,
-    equity: 0,
-    debt: 0,
-    income: 0,
-  });
+  const [financialDetails, setFinancialDetails] =
+    useState<FinancialDetailsType>({
+      propertyPrice: 0,
+      equity: 0,
+      debt: 0,
+      income: 0,
+    });
 
-  const handleInputChange = (name: keyof FinancialDetailsType, value: number) => {
+  const handleInputChange = (
+    name: keyof FinancialDetailsType,
+    value: number
+  ) => {
     const updatedDetails = { ...financialDetails, [name]: value };
     setFinancialDetails(updatedDetails);
     onChange(updatedDetails); // Pass the complete, updated state back to the App
   };
 
   const sliderInputs = [
-    { name: 'propertyPrice', title: 'Boligens pris', placeholder: 'Boligpris' },
-    { name: 'equity', title: 'Egenkapital', placeholder: 'Egenkapital' },
-    { name: 'debt', title: 'Gjeld', placeholder: 'Gjeld' },
-    { name: 'income', title: 'Årslønn brutto', placeholder: 'Årslønn brutto' },
-  ]
+    { name: "propertyPrice", title: "Boligens pris", placeholder: "Boligpris" },
+    { name: "equity", title: "Egenkapital", placeholder: "Egenkapital" },
+    { name: "debt", title: "Gjeld", placeholder: "Gjeld" },
+    { name: "income", title: "Årslønn brutto", placeholder: "Årslønn brutto" },
+  ];
 
   return (
     <div className={styles.wrapper}>
@@ -49,7 +52,14 @@ function CalculationInputsView({
         />
 
         {sliderInputs.map(({ name, title, placeholder }) => (
-          <SliderInput key={name} title={title} placeholder={placeholder} onChangeInputValue={value => handleInputChange(name as keyof FinancialDetailsType, value)} />
+          <SliderInput
+            key={name}
+            title={title}
+            placeholder={placeholder}
+            onChangeInputValue={(value) =>
+              handleInputChange(name as keyof FinancialDetailsType, value)
+            }
+          />
         ))}
       </div>
     </div>

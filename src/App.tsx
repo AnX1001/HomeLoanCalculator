@@ -1,6 +1,11 @@
-
 import { useState } from "react";
-import { CalculationInputsView, ResultsView, CalculateLoanNeed, CalculateEligibleLoan, FinancialDetailsType } from './ImportIndex';
+import {
+  CalculationInputsView,
+  ResultsView,
+  CalculateLoanNeed,
+  CalculateEligibleLoan,
+  FinancialDetailsType,
+} from "./ImportIndex";
 import "./Components/MainStyling/MainStyling.scss";
 
 function App() {
@@ -19,7 +24,6 @@ function App() {
     updateLoanCalculations(updatedState); // Immediately use the updated state for calculations
   };
 
-
   const updateLoanCalculations = (updatedState: FinancialDetailsType) => {
     const updatedEligibleLoan = CalculateEligibleLoan({
       debt: Number(updatedState.debt),
@@ -34,14 +38,10 @@ function App() {
     setLoanNeed(updatedLoanNeed);
   };
 
-
   return (
     <div className="App">
       <CalculationInputsView onChange={getAllValues} />
-      <ResultsView
-        loanNeed={loanNeed}
-        eligibleLoan={eligibleLoan}
-      />
+      <ResultsView loanNeed={loanNeed} eligibleLoan={eligibleLoan} />
     </div>
   );
 }

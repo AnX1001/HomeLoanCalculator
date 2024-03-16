@@ -6,8 +6,6 @@ interface Props {
   onChangeInputValue: (value: number) => void;
 }
 
-
-
 function SliderInput({ title, placeholder, onChangeInputValue }: Props) {
   const [value, setValue] = useState<number>(0);
 
@@ -16,8 +14,6 @@ function SliderInput({ title, placeholder, onChangeInputValue }: Props) {
     setValue(Number(event.target.value));
     onChangeInputValue(Number(event.target.value));
   };
-
-
 
   return (
     <>
