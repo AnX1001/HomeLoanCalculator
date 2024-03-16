@@ -8,9 +8,8 @@
     display: grid;
     justify-content: center;
 
-    .smallerHeading {
-        font-size: 0.8rem;
-        line-height: 150%;
-        font-weight: 500;
+    .heading {
+        line-height: 5%;
+        font-weight: $font-weight-medium;
     }
 }

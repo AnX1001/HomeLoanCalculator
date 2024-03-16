@@ -1,6 +1,6 @@
 import CalculationResults from "../CalculationResults/CalculationResults";
 import styles from "./StylingResultsView.module.scss";
-import SimpleParagraph from ".././SimpleParagraph/SimpleParagraph";
+import SectionWithHeading from "../SimpleParagraph/SectionWithHeading";
 
 
 interface ResultsViewProps {
@@ -21,7 +21,7 @@ function ResultsView({ loanNeed, eligibleLoan }: ResultsViewProps) {
         heading="Ditt lånebehov"
         amount={loanNeed}
       />
-      <SimpleParagraph smallerHeading="Husk at:" />
+      <SectionWithHeading heading="Egenkapital krav" />
     </div>
   );
 }
