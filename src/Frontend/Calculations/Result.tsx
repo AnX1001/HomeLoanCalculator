@@ -1,11 +1,11 @@
-import styles from "./StylingCalculationResults.module.scss";
+import styles from "../Design/SCSS/Result.module.scss";
 
 interface Props {
   heading: string;
   amount: number;
 }
 
-function CalculationResults({ heading, amount }: Props) {
+function Result({ heading, amount }: Props) {
   return (
     <section className={styles.wrapper}>
       <h1 className={styles.heading}>{heading} </h1>
@@ -16,4 +16,4 @@ function CalculationResults({ heading, amount }: Props) {
   );
 }
 
-export default CalculationResults;
+export default Result;

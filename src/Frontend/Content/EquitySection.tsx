@@ -1,10 +1,10 @@
-import styles from "./StylingSimpleParagraph.module.scss";
+import styles from "../Design/SCSS/EquitySection.module.scss";
 
 interface Props {
   heading: string;
 }
 
-function SimpleParagraph({ heading }: Props) {
+function EquitySection({ heading }: Props) {
   return (
     <section className={styles.wrapper}>
       <h1 className={styles.heading}>{heading}</h1>
@@ -20,4 +20,4 @@ function SimpleParagraph({ heading }: Props) {
   );
 }
 
-export default SimpleParagraph;
+export default EquitySection;

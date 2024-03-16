@@ -1,12 +1,12 @@
 import { useState } from "react";
 import {
   CalculationInputsView,
-  ResultsView,
+  AllResults,
   CalculateLoanNeed,
   CalculateEligibleLoan,
   FinancialDetailsType,
-} from "./ImportIndex";
-import "./Components/MainStyling/MainStyling.scss";
+} from "./AppIndex";
+import "./Frontend/Design/SCSS/Main.scss";
 
 function App() {
   // eslint-disable-next-line
@@ -42,7 +42,7 @@ function App() {
   return (
     <div className="App">
       <CalculationInputsView onChange={getAllValues} />
-      <ResultsView loanNeed={loanNeed} eligibleLoan={eligibleLoan} />
+      <AllResults loanNeed={loanNeed} eligibleLoan={eligibleLoan} />
     </div>
   );
 }

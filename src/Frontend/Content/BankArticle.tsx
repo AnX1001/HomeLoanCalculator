@@ -5,7 +5,7 @@ interface Props {
   imageElement?: React.ReactNode;
 }
 
-function TextArticle({ h1Heading, h2Heading, paragraph, imageElement }: Props) {
+function BankArticle({ h1Heading, h2Heading, paragraph, imageElement }: Props) {
   return (
     <div>
       <h1>{h1Heading}</h1>
@@ -16,4 +16,4 @@ function TextArticle({ h1Heading, h2Heading, paragraph, imageElement }: Props) {
   );
 }
 
-export default TextArticle;
+export default BankArticle;
