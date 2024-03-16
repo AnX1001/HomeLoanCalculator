@@ -1,6 +1,6 @@
 import CalculationResults from "../CalculationResults/CalculationResults";
 import styles from "./StylingResultsView.module.scss";
-import SectionWithHeading from "../SimpleParagraph/SectionWithHeading";
+import SectionWithHeading from "../SectionWithHeading/SectionWithHeading";
 
 interface ResultsViewProps {
   loanNeed: number;

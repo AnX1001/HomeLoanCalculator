@@ -10,11 +10,16 @@ $fontSecondary: "Poppins", sans-serif;
   display: grid;
 }
 
-.amount {
+.amount,
+.negativeAmount {
   font-family: "Poppins", sans-serif;
   font-size: 32px;
   margin: 0;
   text-align: center;
+}
+
+.negativeAmount {
+  color: white;
 }
 
 .heading {
