@@ -1,5 +1,8 @@
 @import "../MainStyling/MainStyling";
 
+$fontPrimary: "Red Hat Text", sans-serif;
+$fontSecondary: "Poppins", sans-serif;
+
 .wrapper {
   color: $customYellow;
   justify-content: center;
@@ -7,24 +10,59 @@
   display: grid;
 }
 
+<<<<<<< HEAD
 .amount {
   font-family: "Poppins", sans-serif;
+=======
+
+
+.amount {
+  font-family: $fontSecondary;
+>>>>>>> ec6acddad70ff26d812956dc6d9e880a26c266b9
   font-size: 32px;
   margin: 0;
   text-align: center;
 }
 
+<<<<<<< HEAD
 .heading {
   font-family: "Red Hat Text", sans-serif;
+=======
+h2 {
+  font-family: $fontPrimary;
+  line-height: 150%;
+  font-size: 22.5px, 1.25rem;
+}
+
+
+.title {
+  font-family: $fontPrimary;
+>>>>>>> ec6acddad70ff26d812956dc6d9e880a26c266b9
   font-size: 1rem;
   text-align: center;
   font-weight: $font-weight-normal;
 
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ec6acddad70ff26d812956dc6d9e880a26c266b9
 p {
-  font-family: "Red Hat Text", sans-serif;
+  font-family: $fontPrimary;
   font-size: 1rem;
   line-height: 150%;
+<<<<<<< HEAD
   font-weight: $font-weight-normal;
+=======
+  font-weight: 400;
+}
+
+.smallerParagraph {
+  font-family: $fontPrimary;
+  font-size: 0.8rem;
+  line-height: 150%;
+  font-weight: 400;
+>>>>>>> ec6acddad70ff26d812956dc6d9e880a26c266b9
 }
