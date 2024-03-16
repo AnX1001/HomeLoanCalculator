@@ -9,6 +9,7 @@ import {
 import "./Components/MainStyling/MainStyling.scss";
 
 function App() {
+  // eslint-disable-next-line
   const [loanInputs, setLoanInputs] = useState<FinancialDetailsType>({
     propertyPrice: 0,
     equity: 0,
