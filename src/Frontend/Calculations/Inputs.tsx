@@ -1,6 +1,6 @@
-import styles from "./StylingCalculationInputsView.module.scss";
+import styles from "../Design/SCSS/Inputs.module.scss";
 import { useState } from "react";
-import { ProportionalImage, SliderInput, TextArticle, Logo } from "./index";
+import { Illustration, Slider, BankArticle, Logo } from "./index";
 
 export interface FinancialDetailsType {
   propertyPrice: number;
@@ -9,7 +9,7 @@ export interface FinancialDetailsType {
   income: number;
 }
 
-function CalculationInputsView({
+function Inputs({
   onChange,
 }: {
   onChange: (updatedStates: FinancialDetailsType) => void;
@@ -42,9 +42,9 @@ function CalculationInputsView({
   return (
     <div className={styles.wrapper}>
       <div className={styles.innerWrapper}>
-        <TextArticle
+        <BankArticle
           imageElement={
-            <ProportionalImage alt="Bilde av sparegris" src={Logo} />
+            <Illustration alt="Bilde av sparegris" src={Logo} />
           }
           h1Heading="Boliglånskalkulatoren"
           h2Heading="Hvor mye kan du få i boliglån"
@@ -52,7 +52,7 @@ function CalculationInputsView({
         />
 
         {sliderInputs.map(({ name, title, placeholder }) => (
-          <SliderInput
+          <Slider
             key={name}
             title={title}
             placeholder={placeholder}
@@ -66,4 +66,4 @@ function CalculationInputsView({
   );
 }
 
-export default CalculationInputsView;
+export default Inputs;

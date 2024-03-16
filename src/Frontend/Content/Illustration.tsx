@@ -1,11 +1,11 @@
-import styles from "./StylingProportionalImage.module.scss";
+import styles from "../Design/SCSS/Illustration.module.scss";
 
 interface Props {
   src: string;
   alt: string;
 }
 
-function ProportionalImage({ alt, src }: Props) {
+function Illustration({ alt, src }: Props) {
   return (
     <>
       <img className={styles.image} data-testid="image" alt={alt} src={src} />
@@ -13,4 +13,4 @@ function ProportionalImage({ alt, src }: Props) {
   );
 }
 
-export default ProportionalImage;
+export default Illustration;
