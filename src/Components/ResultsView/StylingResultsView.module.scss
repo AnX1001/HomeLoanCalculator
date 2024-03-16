@@ -1,7 +1,7 @@
 @import "../MainStyling/MainStyling";
 
 .wrapper {
-  padding: $spacingFiftyPx $spacingThirtyPx $spacingThirtyPx $spacingThirtyPx;
+  padding: $spacing-xxl $spacing-lg $spacing-lg $spacing-lg;
   background-color: $darkBackground;
   display: grid;
   justify-content: center;

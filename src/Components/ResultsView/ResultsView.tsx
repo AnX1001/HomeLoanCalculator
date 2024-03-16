@@ -14,12 +14,12 @@ function ResultsView({ loanNeed, eligibleLoan }: ResultsViewProps) {
   return (
     <div className={styles.wrapper}>
       <CalculationResults
-        smallHeading="Innvilget lån"
-        largeHeading={eligibleLoan}
+        heading="Innvilget lån"
+        amount={eligibleLoan}
       />
       <CalculationResults
-        smallHeading="Ditt lånebehov"
-        largeHeading={loanNeed}
+        heading="Ditt lånebehov"
+        amount={loanNeed}
       />
       <SimpleParagraph smallerHeading="Husk at:" />
     </div>

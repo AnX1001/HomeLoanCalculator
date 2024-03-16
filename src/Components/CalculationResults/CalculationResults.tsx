@@ -1,18 +1,16 @@
 import styles from './StylingCalculationResults.module.scss'
 
 interface Props {
-  smallHeading: string;
-  largeHeading: string | number;
-  SimpleParagraph?: React.ReactNode;
+    heading: string;
+    amount: number;
 }
 
-function CalculationResults({ smallHeading, largeHeading, SimpleParagraph }: Props) {
+function CalculationResults({ heading, amount }: Props) {
     return (
-        <div className={styles.wrapper}>
-            <p className={styles.smallHeading }>{smallHeading} </p>
-            <p className={styles.largeHeading}>{largeHeading} kr</p>
-        {SimpleParagraph}
-        </div>
+        <section className={styles.wrapper}>
+            <h1 className={styles.heading}>{heading} </h1>
+            <p className={styles.amount}>{amount} kr</p>
+        </section>
 
     )
 }

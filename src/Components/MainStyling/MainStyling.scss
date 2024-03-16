@@ -24,12 +24,17 @@ $lightShadow: 0px 3px 5px 1px $lightgrey;
 
 
 /* Spacing: 5, 10, 15, 30, 40, 50px in height  */
-$spacingFivePx: 5px;
-$spacingPx: 10px;
-$spacingFifteenPx: 15px;
-$spacingThirtyPx: 30px;
-$spacingFourtyPx: 40px;
-$spacingFiftyPx: 50px;
+$spacing-xs: 5px;
+$spacing-sm: 10px;
+$spacing-md: 15px;
+$spacing-lg: 30px;
+$spacing-xl: 40px;
+$spacing-xxl: 50px;
+
+/* Font weight: 400, 500 */
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+
 
 /* Typography using fonts Poppins and Red Hat Text from Google Fonts */
 

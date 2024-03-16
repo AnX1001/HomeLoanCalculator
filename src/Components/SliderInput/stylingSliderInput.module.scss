@@ -1,7 +1,7 @@
 @import "../MainStyling/MainStyling";
 
 .h3 {
-  margin-bottom: $spacingFivePx;
+  margin-bottom: $spacing-xs;
 }
 
 .inputGroup {
@@ -20,8 +20,8 @@ input {
   width: 100%;
   background-color: $customBeige;
   border: none;
-  margin-top: $spacingFifteenPx;
-  margin-bottom: $spacingFivePx * 2;
+  margin-top: $spacing-xxl;
+  margin-bottom: $spacing-xs * 2;
   -webkit-appearance: none;
   appearance: none;
 }
