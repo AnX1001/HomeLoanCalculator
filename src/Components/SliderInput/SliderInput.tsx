@@ -28,7 +28,7 @@ function SliderInput({ title, placeholder, onChangeInputValue }: Props) {
             min="0"
             id="boligpris"
             value={
-              value ? `${new Intl.NumberFormat("no-NO").format(value)} kr` : ""
+              value ? value : ""
             }
             onChange={handleOnChange}
           />
