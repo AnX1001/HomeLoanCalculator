@@ -6,11 +6,7 @@ interface Props {
 }
 
 function Illustration({ alt, src }: Props) {
-  return (
-    <>
-      <img className={styles.image} data-testid="image" alt={alt} src={src} />
-    </>
-  );
+  return <img className={styles.image} data-testid="image" alt={alt} src={src} />
 }
 
 export default Illustration;
