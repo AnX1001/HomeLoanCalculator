@@ -1,4 +1,4 @@
-interface BankArticleProps {
+interface LoanInfoProps {
   title: string;
   subtitle: string;
   paragraph: string;
@@ -6,7 +6,7 @@ interface BankArticleProps {
   imageElement?: React.ReactNode;
 }
 
-function BankArticle({ title, subtitle, paragraph, instructions, imageElement }: BankArticleProps) {
+function LoanInfo({ title, subtitle, paragraph, instructions, imageElement }: LoanInfoProps) {
   return (
     <div>
       <h1>{title}</h1>
@@ -18,4 +18,4 @@ function BankArticle({ title, subtitle, paragraph, instructions, imageElement }:
   );
 }
 
-export default BankArticle;
+export default LoanInfo;

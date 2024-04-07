@@ -1,11 +1,13 @@
 import styles from "../Design/SCSS/Result.module.scss";
 
-interface Props {
+interface ResultProps {
   heading: string;
   amount: number;
 }
 
-function Result({ heading, amount }: Props) {
+console.log(3242)
+
+function Result({ heading, amount }: ResultProps) {
   return (
     <section className={styles.wrapper}>
       <h1 className={styles.heading}>{heading} </h1>

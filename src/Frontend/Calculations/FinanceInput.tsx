@@ -1,6 +1,6 @@
 import styles from "../Design/SCSS/Inputs.module.scss";
 import { useState } from "react";
-import { Illustration, ComboInput, BankArticle, Logo } from "./index";
+import { Illustration, ComboInput, LoanInfo, Logo } from "./index";
 
 export interface FinancialDetailsType {
   propertyPrice: number;
@@ -42,7 +42,7 @@ function FinanceInputs({
   return (
     <div className={styles.wrapper}>
       <div className={styles.innerWrapper}>
-        <BankArticle
+        <LoanInfo
           imageElement={
             <Illustration alt="Bilde av sparegris" src={Logo} />
           }

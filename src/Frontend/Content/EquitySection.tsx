@@ -1,10 +1,10 @@
 import styles from "../Design/SCSS/EquitySection.module.scss";
 
-interface Props {
+interface EquitySectionProps {
   heading: string;
 }
 
-function EquitySection({ heading }: Props) {
+function EquitySection({ heading }: EquitySectionProps) {
   return (
     <section className={styles.wrapper}>
       <h1 className={styles.heading}>{heading}</h1>

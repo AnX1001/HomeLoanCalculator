@@ -1,11 +1,11 @@
 import styles from "../Design/SCSS/Illustration.module.scss";
 
-interface Props {
+interface IllustrationProps {
   src: string;
   alt: string;
 }
 
-function Illustration({ alt, src }: Props) {
+function Illustration({ alt, src }: IllustrationProps) {
   return <img className={styles.image} data-testid="image" alt={alt} src={src} />
 }
 
