@@ -1,12 +1,12 @@
 import { useState } from "react";
-import styles from "../Design/SCSS/Slider.module.scss";
+import styles from "../Design/SCSS/ComboInput.module.scss";
 interface Props {
   title: string;
   placeholder: string;
   onChangeInputValue: (value: number) => void;
 }
 
-function Slider({ title, placeholder, onChangeInputValue }: Props) {
+function ComboInput({ title, placeholder, onChangeInputValue }: Props) {
   const [value, setValue] = useState<number>(0);
 
   /* event.target.value is set with the slider thumb or directly in the inputfield  */
@@ -18,7 +18,7 @@ function Slider({ title, placeholder, onChangeInputValue }: Props) {
   return (
 
     <div className={styles.inputGroup}>
-      <label>
+      <label className={styles.labelInputGroup}>
         <h3 className={styles.h3}>{title}</h3>
         <input
           name="boligpris"
@@ -32,6 +32,7 @@ function Slider({ title, placeholder, onChangeInputValue }: Props) {
           }
           onChange={handleOnChange}
         />
+
       </label>
 
       <input
@@ -47,4 +48,4 @@ function Slider({ title, placeholder, onChangeInputValue }: Props) {
 
   );
 }
-export default Slider;
+export default ComboInput;

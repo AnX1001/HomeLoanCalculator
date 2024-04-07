@@ -1,6 +1,6 @@
 import styles from "../Design/SCSS/Inputs.module.scss";
 import { useState } from "react";
-import { Illustration, Slider, BankArticle, Logo } from "./index";
+import { Illustration, ComboInput, BankArticle, Logo } from "./index";
 
 export interface FinancialDetailsType {
   propertyPrice: number;
@@ -9,7 +9,7 @@ export interface FinancialDetailsType {
   income: number;
 }
 
-function Inputs({
+function FinanceInputs({
   onChange,
 }: {
   onChange: (updatedStates: FinancialDetailsType) => void;
@@ -49,10 +49,10 @@ function Inputs({
           h1Heading="Boliglånskalkulatoren"
           h2Heading="Hvor mye kan du få i boliglån"
           paragraph="Dette er avhengig av mange variabler. Men en vanlig kalkulasjon vil ta i betraktning din årsinntekt, gjeld, egenkapital og boligens totalpris."
+          instructions="Legg inn beløpsdetaljene under for beregning av innvilget boliglån."
         />
-
         {sliderInputs.map(({ name, title, placeholder }) => (
-          <Slider
+          <ComboInput
             key={name}
             title={title}
             placeholder={placeholder}
@@ -66,4 +66,4 @@ function Inputs({
   );
 }
 
-export default Inputs;
+export default FinanceInputs;

@@ -14,6 +14,7 @@ input {
   height: 30px;
   border: 1px solid $lightBackground;
   border-radius: 4px;
+  margin-right: 5px;
 }
 
 .inputSlider {
@@ -69,7 +70,9 @@ input {
   margin-bottom: 10px;
   font-size: 1rem;
   font-weight: $font-weight-large;
+
 }
+
 
 /* Remove arrows from input type number */
 /* Chrome, Safari, Edge, Opera */
