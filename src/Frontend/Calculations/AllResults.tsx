@@ -8,7 +8,7 @@ interface ResultsViewProps {
 }
 
 function AllResults({ loanNeed, eligibleLoan }: ResultsViewProps) {
-  //Todo: document this part: function ResultsView({lanebehovNumber}: {lanebehovNumber: string})
+
 
   return (
     <div className={styles.wrapper}>

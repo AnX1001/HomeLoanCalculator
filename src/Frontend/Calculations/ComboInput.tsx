@@ -1,12 +1,12 @@
 import { useState } from "react";
 import styles from "../Design/SCSS/ComboInput.module.scss";
-interface Props {
+interface CompoInputProps {
   title: string;
   placeholder: string;
   onChangeInputValue: (value: number) => void;
 }
 
-function ComboInput({ title, placeholder, onChangeInputValue }: Props) {
+function ComboInput({ title, placeholder, onChangeInputValue }: CompoInputProps) {
   const [value, setValue] = useState<number>(0);
 
   /* event.target.value is set with the slider thumb or directly in the inputfield  */
