@@ -5,7 +5,7 @@ interface ResultProps {
   amount: number;
 }
 
-console.log(3242)
+
 
 function Result({ heading, amount }: ResultProps) {
   return (
