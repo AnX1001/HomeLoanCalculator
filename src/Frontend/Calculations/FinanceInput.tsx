@@ -34,28 +34,35 @@ function FinanceInputs({
     onChange(updatedDetails); // Pass the complete, updated state back to the App
   };
 
-  const sliderInputContent = textContent.financeInput.sliderInputs;
+
+
+  const {
+    loanInfo: { illustrationText, heading, subHeading, paragraph, instructions },
+    financeInput: {
+      sliderInputs: {
+        propertyPrice, equity, debt, income }
+    }
+  } = textContent
 
   const sliderInputs = [
-    { name: sliderInputContent.propertyPrice[userLocale], title: sliderInputContent.propertyPrice[userLocale], placeholder: sliderInputContent.propertyPrice[userLocale] },
-    { name: sliderInputContent.equity[userLocale], title: sliderInputContent.equity[userLocale], placeholder: sliderInputContent.equity[userLocale] },
-    { name: sliderInputContent.debt[userLocale], title: sliderInputContent.debt[userLocale], placeholder: sliderInputContent.debt[userLocale] },
-    { name: sliderInputContent.income[userLocale], title: sliderInputContent.income[userLocale], placeholder: sliderInputContent.income[userLocale] },
+    { name: propertyPrice[userLocale], title: propertyPrice[userLocale], placeholder: propertyPrice[userLocale] },
+    { name: equity[userLocale], title: equity[userLocale], placeholder: equity[userLocale] },
+    { name: debt[userLocale], title: debt[userLocale], placeholder: debt[userLocale] },
+    { name: income[userLocale], title: income[userLocale], placeholder: income[userLocale] },
   ];
 
-  const loanInfoContent = textContent.loanInfo;
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.innerWrapper}>
         <LoanInfo
           imageElement={
-            <Illustration alt={loanInfoContent.illustrationText[userLocale]} src={Logo} />
+            <Illustration alt={illustrationText[userLocale]} src={Logo} />
           }
-          title={loanInfoContent.heading[userLocale]}
-          subtitle={loanInfoContent.subHeading[userLocale]}
-          paragraph={loanInfoContent.paragraph[userLocale]}
-          instructions={loanInfoContent.instructions[userLocale]}
+          title={heading[userLocale]}
+          subtitle={subHeading[userLocale]}
+          paragraph={paragraph[userLocale]}
+          instructions={instructions[userLocale]}
         />
         {sliderInputs.map(({ name, title, placeholder }) => (
           <ComboInput

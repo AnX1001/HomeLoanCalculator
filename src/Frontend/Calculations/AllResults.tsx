@@ -9,16 +9,24 @@ interface ResultsViewProps {
   eligibleLoan: number;
 }
 
+const {
+  equity: { equityRequirement, heading, additionalCosts },
+  result: { heading: {
+    approvedLoan, loanRequirements }
+  }
+} = textContent
+
+
 function AllResults({ loanNeed, eligibleLoan }: ResultsViewProps) {
 
 
   return (
     <div className={styles.wrapper}>
-      <Result heading={textContent.result.heading.approvedLoan[userLocale]} amount={eligibleLoan} />
-      <Result heading={textContent.result.heading.loanRequirements[userLocale]} amount={loanNeed} />
-      <EquitySection heading={textContent.equity.heading[userLocale]}>
-        <p>{textContent.equity.equityRequirement[userLocale]}</p>
-        <p>{textContent.equity.additionalCosts[userLocale]}</p>
+      <Result heading={approvedLoan[userLocale]} amount={eligibleLoan} />
+      <Result heading={loanRequirements[userLocale]} amount={loanNeed} />
+      <EquitySection heading={heading[userLocale]}>
+        <p>{equityRequirement[userLocale]}</p>
+        <p>{additionalCosts[userLocale]}</p>
       </EquitySection>
     </div>
   );
