@@ -1,0 +1,89 @@
+{
+    "supportedLanguanges": {
+        "nb": "string",
+        "en-US": "string",
+        "vi": "string"
+    },
+    "equity": {
+        "heading": {
+            "nb": "Egenkapital krav",
+            "en-US": "Equity Requirement",
+            "vi": "Vốn yêu cầu"
+        },
+        "equityRequirement": {
+            "nb": "15% egenkapital er et krav for boliglån. En annen mulighet er at familie stiller som kausjonist.",
+            "en-US": "15% equity is a requirement for mortgage loans. Another option is for family to act as guarantors.",
+            "vi": "15% vốn chủ sở hữu là một yêu cầu cho vay mua nhà. Một lựa chọn khác là gia đình đóng vai trò như người bảo lãnh."
+        },
+        "additionalCosts": {
+            "nb": "Husk å ta med omkostninger i utredningen. Størrelsen på omkostninger vil være avhengig av type bolig eller eiendom.",
+            "en-US": "Remember to include costs in the investigation. The size of the costs will depend on the type of housing or property.",
+            "vi": "Nhớ bao gồm chi phí trong quá trình điều tra. Kích thước của các chi phí sẽ phụ thuộc vào loại nhà ở hoặc tài sản."
+        }
+    },
+    "loanInfo": {
+        "illustrationText": {
+            "nb": "Bilde av sparegris",
+            "en-US": "Image of a piggy bank",
+            "vi": "Hình ảnh của heo đất"
+        },
+        "heading": {
+            "nb": "Boliglånskalkulatoren",
+            "en-US": "Mortage calulator",
+            "vi": "Công cụ tính toán khoản vay mua nhà"
+        },
+        "subHeading": {
+            "nb": "Hvor mye kan du få i boliglån?",
+            "en-US": "How much can you get in a mortgage?",
+            "vi": "Bạn có thể vay bao nhiêu tiền mua nhà?"
+        },
+        "paragraph": {
+            "nb": "Dette er avhengig av mange variabler. Men en vanlig kalkulasjon vil ta i betraktning din årsinntekt, gjeld, egenkapital og boligens totalpris.",
+            "en-US": "This depends on many variables. However, a common calculation will take into account your annual income, debt, equity, and the total price of the property.",
+            "vi": "Điều này phụ thuộc vào nhiều yếu tố. Tuy nhiên, một phép tính thông thường sẽ xem xét đến thu nhập hàng năm của bạn, nợ nần, vốn chủ sở hữu và tổng giá trị của bất động sản."
+        },
+        "instructions": {
+            "nb": "Legg inn beløpsdetaljene under for beregning av innvilget boliglån.",
+            "en-US": "Enter the amount details below for the calculation of the approved mortgage",
+            "vi": "Nhập chi tiết số tiền bên dưới để tính toán khoản vay mua nhà được phê duyệt"
+        }
+    },
+    "financeInput": {
+        "sliderInputs": {
+            "equity": {
+                "nb": "Egenkapital",
+                "en-US": "Debt",
+                "vi": "Nợ"
+            },
+            "debt": {
+                "nb": "Gjeld",
+                "en-US": "Debt",
+                "vi": "Nợ"
+            },
+            "propertyPrice": {
+                "nb": "Boligens pris",
+                "en-US": "Property Price",
+                "vi": "Giá Bất Động Sản"
+            },
+            "income": {
+                "nb": "Årslønn brutto",
+                "en-US": "Gross Annual Salary",
+                "vi": "Lương Năm Gộp"
+            }
+        }
+    },
+    "result": {
+        "heading": {
+            "approvedLoan": {
+                "nb": "Innvilget lån",
+                "en-US": "Approved Loan",
+                "vi": "Vay chấp nhận"
+            },
+            "loanRequirements": {
+                "nb": "Ditt lånebehov",
+                "en-US": "Loan requirement",
+                "vi": "Yêu cầu vay"
+            }
+        }
+    }
+}

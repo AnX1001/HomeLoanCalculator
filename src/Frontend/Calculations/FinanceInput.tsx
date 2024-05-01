@@ -1,6 +1,8 @@
 import styles from "../Design/SCSS/Inputs.module.scss";
 import { useState } from "react";
 import { Illustration, ComboInput, LoanInfo, Logo } from "./index";
+import textContent from "../Content/textContent.json"
+import { userLocale } from "../Content/languageUtil"
 
 export interface FinancialDetailsType {
   propertyPrice: number;
@@ -32,24 +34,28 @@ function FinanceInputs({
     onChange(updatedDetails); // Pass the complete, updated state back to the App
   };
 
+  const sliderInputContent = textContent.financeInput.sliderInputs;
+
   const sliderInputs = [
-    { name: "propertyPrice", title: "Boligens pris", placeholder: "Boligpris" },
-    { name: "equity", title: "Egenkapital", placeholder: "Egenkapital" },
-    { name: "debt", title: "Gjeld", placeholder: "Gjeld" },
-    { name: "income", title: "Årslønn brutto", placeholder: "Årslønn brutto" },
+    { name: sliderInputContent.propertyPrice[userLocale], title: sliderInputContent.propertyPrice[userLocale], placeholder: sliderInputContent.propertyPrice[userLocale] },
+    { name: sliderInputContent.equity[userLocale], title: sliderInputContent.equity[userLocale], placeholder: sliderInputContent.equity[userLocale] },
+    { name: sliderInputContent.debt[userLocale], title: sliderInputContent.debt[userLocale], placeholder: sliderInputContent.debt[userLocale] },
+    { name: sliderInputContent.income[userLocale], title: sliderInputContent.income[userLocale], placeholder: sliderInputContent.income[userLocale] },
   ];
+
+  const loanInfoContent = textContent.loanInfo;
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.innerWrapper}>
         <LoanInfo
           imageElement={
-            <Illustration alt="Bilde av sparegris" src={Logo} />
+            <Illustration alt={loanInfoContent.illustrationText[userLocale]} src={Logo} />
           }
-          title="Boliglånskalkulatoren"
-          subtitle="Hvor mye kan du få i boliglån"
-          paragraph="Dette er avhengig av mange variabler. Men en vanlig kalkulasjon vil ta i betraktning din årsinntekt, gjeld, egenkapital og boligens totalpris."
-          instructions="Legg inn beløpsdetaljene under for beregning av innvilget boliglån."
+          title={loanInfoContent.heading[userLocale]}
+          subtitle={loanInfoContent.subHeading[userLocale]}
+          paragraph={loanInfoContent.paragraph[userLocale]}
+          instructions={loanInfoContent.instructions[userLocale]}
         />
         {sliderInputs.map(({ name, title, placeholder }) => (
           <ComboInput
