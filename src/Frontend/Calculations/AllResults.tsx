@@ -19,14 +19,8 @@ function AllResults({ loanNeed, eligibleLoan }: ResultsViewProps) {
       <Result heading={textContent.result.heading.approvedLoan[userLocale]} amount={eligibleLoan} />
       <Result heading={textContent.result.heading.loanRequirements[userLocale]} amount={loanNeed} />
       <EquitySection heading={textContent.equity.heading[userLocale]}>
-        <p>
-          {textContent.equity.equityRequirement[userLocale]}
-
-        </p>
-        <p>
-          {textContent.equity.additionalCosts[userLocale]}
-
-        </p>
+        <p>{textContent.equity.equityRequirement[userLocale]}</p>
+        <p>{textContent.equity.additionalCosts[userLocale]}</p>
       </EquitySection>
     </div>
   );
