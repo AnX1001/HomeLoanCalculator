@@ -9,8 +9,6 @@ interface ResultsViewProps {
   eligibleLoan: number;
 }
 
-
-console.log(navigator.language)
 function AllResults({ loanNeed, eligibleLoan }: ResultsViewProps) {
 
 
