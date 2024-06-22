@@ -2,11 +2,13 @@ import { useState } from "react";
 import styles from "../Design/SCSS/ComboInput.module.scss";
 interface CompoInputProps {
   title: string;
+  id: string;
+  name: string;
   placeholder: string;
   onChangeInputValue: (value: number) => void;
 }
 
-function ComboInput({ title, placeholder, onChangeInputValue }: CompoInputProps) {
+function ComboInput({ id, name, title, placeholder, onChangeInputValue }: CompoInputProps) {
   const [value, setValue] = useState<number>(0);
 
   /* event.target.value is set with the slider thumb or directly in the inputfield  */
@@ -21,12 +23,12 @@ function ComboInput({ title, placeholder, onChangeInputValue }: CompoInputProps)
       <label className={styles.labelInputGroup}>
         <h3 className={styles.h3}>{title}</h3>
         <input
-          name="boligpris"
           className={styles.inputNumber}
           placeholder={placeholder}
           type="text"
           min="0"
-          id="boligpris"
+          id={id}
+          name={name}
           value={
             value ? value : ""
           }
@@ -36,6 +38,8 @@ function ComboInput({ title, placeholder, onChangeInputValue }: CompoInputProps)
       </label>
 
       <input
+        id={id}
+        name={name}
         aria-label="velg sum"
         className={styles.inputSlider}
         type="range"

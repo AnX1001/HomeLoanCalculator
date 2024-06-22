@@ -36,19 +36,13 @@ function FinanceInputs({
 
 
 
-  const {
-    loanInfo: { illustrationText, heading, subHeading, paragraph, instructions },
-    financeInput: {
-      sliderInputs: {
-        propertyPrice, equity, debt, income }
-    }
-  } = textContent
+  const { loanInfo: { illustrationText, heading, subHeading, paragraph, instructions }, financeInput } = textContent;
 
   const sliderInputs = [
-    { name: propertyPrice[userLocale], title: propertyPrice[userLocale], placeholder: propertyPrice[userLocale] },
-    { name: equity[userLocale], title: equity[userLocale], placeholder: equity[userLocale] },
-    { name: debt[userLocale], title: debt[userLocale], placeholder: debt[userLocale] },
-    { name: income[userLocale], title: income[userLocale], placeholder: income[userLocale] },
+    { name: 'propertyPrice', title: financeInput.propertyPrice[userLocale], placeholder: financeInput.propertyPrice[userLocale] },
+    { name: 'equity', title: financeInput.equity[userLocale], placeholder: financeInput.equity[userLocale] },
+    { name: 'debt', title: financeInput.debt[userLocale], placeholder: financeInput.debt[userLocale] },
+    { name: 'income', title: financeInput.income[userLocale], placeholder: financeInput.income[userLocale] },
   ];
 
 
@@ -66,6 +60,8 @@ function FinanceInputs({
         />
         {sliderInputs.map(({ name, title, placeholder }) => (
           <ComboInput
+            id={name}
+            name={name}
             key={name}
             title={title}
             placeholder={placeholder}

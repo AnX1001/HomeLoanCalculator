@@ -49,27 +49,25 @@
         }
     },
     "financeInput": {
-        "sliderInputs": {
-            "equity": {
-                "nb": "Egenkapital",
-                "en-US": "Debt",
-                "vi": "Nợ"
-            },
-            "debt": {
-                "nb": "Gjeld",
-                "en-US": "Debt",
-                "vi": "Nợ"
-            },
-            "propertyPrice": {
-                "nb": "Boligens pris",
-                "en-US": "Property Price",
-                "vi": "Giá Bất Động Sản"
-            },
-            "income": {
-                "nb": "Årslønn brutto",
-                "en-US": "Gross Annual Salary",
-                "vi": "Lương Năm Gộp"
-            }
+        "equity": {
+            "nb": "Egenkapital",
+            "en-US": "Equity",
+            "vi": "Vốn chủ sở hữu"
+        },
+        "debt": {
+            "nb": "Gjeld",
+            "en-US": "Debt",
+            "vi": "Nợ"
+        },
+        "propertyPrice": {
+            "nb": "Boligens pris",
+            "en-US": "Property Price",
+            "vi": "Giá Bất Động Sản"
+        },
+        "income": {
+            "nb": "Årslønn brutto",
+            "en-US": "Gross Annual Salary",
+            "vi": "Lương Năm Gộp"
         }
     },
     "result": {
