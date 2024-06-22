@@ -1,8 +1,8 @@
 import Result from "./Result";
 import styles from "../Design/SCSS/AllResults.module.scss";
 import { EquitySection } from "./index";
-import textContent from "../Content/textContent.json"
-import { userLocale } from "../Content/languageUtil"
+import textContent from "../Content/textContent.json";
+import { userLocale } from "../Content/languageUtil";
 
 interface ResultsViewProps {
   loanNeed: number;
@@ -14,7 +14,7 @@ const {
   result: { heading: {
     approvedLoan, loanRequirements }
   }
-} = textContent
+} = textContent;
 
 
 function AllResults({ loanNeed, eligibleLoan }: ResultsViewProps) {
