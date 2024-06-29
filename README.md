@@ -1,14 +1,12 @@
-# Getting Started
+# Boliglånskalkulator
 
-<div >
-	<code><img width="50" src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" alt="React" title="React"/></code>
-	<code><img width="50" src="https://user-images.githubusercontent.com/25181517/183890598-19a0ac2d-e88a-4005-a8df-1ee36782fde1.png" alt="TypeScript" title="TypeScript"/></code>
-</div>
+This project is bootstraped by create-react-app.
+ 
+![alt text](./src/Frontend/design/Images/userInterface.png)
 
+ `npm start`
 
-## `npm start`
-
-Runs the app in the development mode.\
+Runs the app in the development mode. \
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
