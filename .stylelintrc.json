@@ -1,8 +1,14 @@
-{ "extends": ["stylelint-config-standard"], "rules": {},
-"overrides": [ {
-    "files": ["**/*.scss"],
-    "rules": {
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {},
+  "overrides": [
+    {
+      "files": ["**/*.scss"],
+      "rules": {
+       "property-no-vendor-prefix": null,
         "import-notation": null,
-        "selector-class-pattern": null 
+        "selector-class-pattern": null
+      }
     }
-}] }
+  ]
+}

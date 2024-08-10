@@ -22,14 +22,13 @@ input {
   border: none;
   margin-top: $spacing-xxl;
   margin-bottom: $spacing-xs * 2;
-  appearance: none;
   background-color: $lightgrey;
   height: 12px;
   margin-left: 20px;
   border-radius: 3px;
 
   /* Chrome, Safari, and Opera */
-  appearance: none;
+  -webkit-appearance: none;
   appearance: none;
 }
 
