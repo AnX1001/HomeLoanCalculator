@@ -78,3 +78,12 @@ User Interaction
 | State updated, App re-renders with new values
 -------------------------------
 ````
+
+
+## CSS 
+
+To ensure consistent CSS, I have installed Stylelint. It enforces a set of standard rules, along with custom rules defined in the .stylelintrc.json file. 
+
+```bash
+npm run lint:css
+```
