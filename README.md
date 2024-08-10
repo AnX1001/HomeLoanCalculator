@@ -2,7 +2,7 @@
 
 This project is bootstraped by create-react-app.
  
-![alt text](./src/Frontend/design/Images/userInterface.png)
+![alt text](./src/Frontend/Design/Images/userInterface.png)
 
  `npm start`
 
