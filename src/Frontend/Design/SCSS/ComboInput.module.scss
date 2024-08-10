@@ -1,4 +1,4 @@
-@import "./Main";
+@import './Main';
 
 .h3 {
   margin-bottom: $spacing-xs;
@@ -6,11 +6,6 @@
 
 .inputGroup {
   display: grid;
-
-
-
-
-
 }
 
 input {
@@ -24,27 +19,22 @@ input {
 
 .inputSlider {
   width: 100%;
-  background-color: $customBeige;
   border: none;
   margin-top: $spacing-xxl;
   margin-bottom: $spacing-xs * 2;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-/* Chrome, safari and opera */
-.inputSlider {
-  -webkit-appearance: none;
   appearance: none;
   background-color: $lightgrey;
   height: 12px;
-  width: 90%;
   margin-left: 20px;
   border-radius: 3px;
+
+  /* Chrome, Safari, and Opera */
+  appearance: none;
+  appearance: none;
 }
 
 .inputSlider::-webkit-slider-thumb {
-  -webkit-appearance: none;
+  appearance: none;
   cursor: grabbing;
   background-color: $darkBackground;
   border: none;
@@ -75,11 +65,10 @@ input {
   margin-bottom: 10px;
   font-size: 1rem;
   font-weight: $font-weight-large;
-
 }
 
-
 /* Remove arrows from input type number */
+
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
