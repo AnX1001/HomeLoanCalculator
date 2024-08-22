@@ -1,0 +1,8 @@
+
+echo "🚀 Pre-commit hook by Husky started"
+
+# Run lint-staged
+npx lint-staged
+
+
+echo "😴 Pre-commit hook finished"

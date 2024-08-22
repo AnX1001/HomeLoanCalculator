@@ -6,6 +6,7 @@ interface LoanInfoProps {
   imageElement?: React.ReactNode;
 }
 
+
 function LoanInfo({ title, subtitle, paragraph, instructions, imageElement }: LoanInfoProps) {
   return (
     <div>
