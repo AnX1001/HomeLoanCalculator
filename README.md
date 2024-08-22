@@ -87,3 +87,7 @@ To ensure consistent CSS, I have installed Stylelint. It enforces a set of stand
 ```bash
 npm run lint:css
 ```
+
+## Code Style 
+
+I’ve integrated Husky with lint-staged to enforce code style standards by running a pre-commit hook. This hook automatically triggers npm run lint and npm run lint:css before each commit, ensuring that all code meets the project’s linting and CSS formatting guidelines.
