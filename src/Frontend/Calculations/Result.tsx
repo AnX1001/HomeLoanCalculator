@@ -1,4 +1,4 @@
-import styles from "../Design/SCSS/Result.module.scss";
+import styles from "../design/style/Result.module.scss";
 
 interface ResultProps {
   heading: string;

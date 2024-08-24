@@ -1,8 +1,8 @@
 import Result from "./Result";
-import styles from "../Design/SCSS/AllResults.module.scss";
+import styles from "../design/style/AllResults.module.scss";
 import { EquitySection } from "./index";
-import textContent from "../Content/textContent.json";
-import { userLocale } from "../Content/languageUtil";
+import textContent from "../content/textContent.json";
+import { userLocale } from "../content/languageUtil";
 
 interface ResultsViewProps {
   loanNeed: number;

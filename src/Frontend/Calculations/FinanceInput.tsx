@@ -1,8 +1,8 @@
-import styles from "../Design/SCSS/Inputs.module.scss";
+import styles from "../design/style/Inputs.module.scss";
 import { useState } from "react";
 import { Illustration, ComboInput, LoanInfo, Logo } from "./index";
-import textContent from "../Content/textContent.json";
-import { userLocale } from "../Content/languageUtil";
+import textContent from "../content/textContent.json";
+import { userLocale } from "../content/languageUtil";
 
 export interface FinancialDetailsType {
   propertyPrice: number;

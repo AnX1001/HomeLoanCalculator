@@ -1,4 +1,4 @@
-import styles from "../Design/SCSS/Illustration.module.scss";
+import styles from "../design/style/Illustration.module.scss";
 
 interface IllustrationProps {
   src: string;

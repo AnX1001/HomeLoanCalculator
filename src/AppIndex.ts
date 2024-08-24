@@ -1,7 +1,7 @@
-export { default as CalculationInputsView } from "./Frontend/Calculations/FinanceInput";
-export { default as AllResults } from "./Frontend/Calculations/AllResults";
+export { default as CalculationInputsView } from "./frontend/calculations/FinanceInput";
+export { default as AllResults } from "./frontend/calculations/AllResults";
 export {
   CalculateLoanNeed,
   CalculateEligibleLoan,
-} from "./Frontend/Calculations/Formulas";
-export type { FinancialDetailsType } from "./Frontend/Calculations/FinanceInput";
+} from "./frontend/calculations/Formulas";
+export type { FinancialDetailsType } from "./frontend/calculations/FinanceInput";

@@ -6,7 +6,7 @@ import {
   CalculateEligibleLoan,
   FinancialDetailsType,
 } from "./AppIndex";
-import "./Frontend/Design/SCSS/Main.scss";
+import "./frontend/design/style/Main.scss";
 
 function App() {
   // eslint-disable-next-line

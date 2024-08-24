@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "../Design/SCSS/ComboInput.module.scss";
+import styles from "../design/style/ComboInput.module.scss";
 interface CompoInputProps {
   title: string;
   id: string;
