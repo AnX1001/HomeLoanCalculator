@@ -10,84 +10,9 @@ Runs the app in the development mode. \
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
-## State Update Flow Diagram
-```
-App Component
----------------
-| Initial State: loanInputs, eligibleLoan, loanNeed
-| 
-| getAllValues(updatedState)
-|  |
-|  | Update state: setLoanInputs(updatedState)
-|  | Calculate loans: updateLoanCalculations(updatedState)
-|  |
-|  V
-| <CalculationInputsView onChange={getAllValues} />
----------------
+## Documentation
 
-CalculationInputsView Component
--------------------------------
-| Props: onChange={getAllValues}
-| 
-| <FinanceInputs onChange={onChange} />
--------------------------------
-
-FinanceInputs Component
--------------------------------
-| Initial State: financialDetails
-| 
-| handleInputChange(name, value)
-|  |
-|  | Update local state: setFinancialDetails(updatedDetails)
-|  | Call parent function: onChange(updatedDetails)
-|  |
-|  V
-| <ComboInput ... onChangeInputValue={handleInputChange} />
--------------------------------
-
-ComboInput Component
--------------------------------
-| Initial State: value
-| 
-| handleOnChange(event)
-|  |
-|  | Update local state: setValue(newValue)
-|  | Call parent function: onChangeInputValue(newValue)
-|  |
-|  V
-| <input type="number" ... />
-| <input type="range" ... />
--------------------------------
-
-User Interaction
--------------------------------
-| User changes value on input
-| 
-| ComboInput.handleOnChange(event)
-|  |
-|  V
-| FinanceInputs.handleInputChange(name, newValue)
-|  |
-|  V
-| FinanceInputs.onChange(updatedDetails)
-|  |
-|  V
-| App.getAllValues(updatedState)
-|  |
-|  V
-| State updated, App re-renders with new values
--------------------------------
-````
+- [Code Quality](src/documentation/CodeQuality.md)
+- [Loan State Flow Diagram](src/documentation/LoanStateFlowDiagram.md)
 
 
-## CSS 
-
-To ensure consistent CSS, I have installed Stylelint. It enforces a set of standard rules, along with custom rules defined in the .stylelintrc.json file. 
-
-```bash
-npm run lint:css
-```
-
-## Code Style 
-
-I’ve integrated Husky with lint-staged to enforce code style standards by running a pre-commit hook. This hook automatically triggers npm run lint and npm run lint:css before each commit, ensuring that all code meets the project’s linting and CSS formatting guidelines.
