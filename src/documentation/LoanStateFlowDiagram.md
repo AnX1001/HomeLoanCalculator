@@ -1,9 +1,10 @@
 # State Update Flow Diagram
+
 ```
 App Component
 ---------------
 | Initial State: loanInputs, eligibleLoan, loanNeed
-| 
+|
 | getAllValues(updatedState)
 |  |
 |  | Update state: setLoanInputs(updatedState)
@@ -16,14 +17,14 @@ App Component
 CalculationInputsView Component
 -------------------------------
 | Props: onChange={getAllValues}
-| 
+|
 | <FinanceInputs onChange={onChange} />
 -------------------------------
 
 FinanceInputs Component
 -------------------------------
 | Initial State: financialDetails
-| 
+|
 | handleInputChange(name, value)
 |  |
 |  | Update local state: setFinancialDetails(updatedDetails)
@@ -36,7 +37,7 @@ FinanceInputs Component
 ComboInput Component
 -------------------------------
 | Initial State: value
-| 
+|
 | handleOnChange(event)
 |  |
 |  | Update local state: setValue(newValue)
@@ -50,7 +51,7 @@ ComboInput Component
 User Interaction
 -------------------------------
 | User changes value on input
-| 
+|
 | ComboInput.handleOnChange(event)
 |  |
 |  V
@@ -64,5 +65,5 @@ User Interaction
 |  |
 |  V
 | State updated, App re-renders with new values
- 
-````
+
+```

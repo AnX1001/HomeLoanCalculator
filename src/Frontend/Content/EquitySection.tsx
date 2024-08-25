@@ -2,7 +2,7 @@ import styles from "../design/style/EquitySection.module.scss";
 
 interface EquitySectionProps {
   heading: string;
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 function EquitySection({ heading, children }: EquitySectionProps) {

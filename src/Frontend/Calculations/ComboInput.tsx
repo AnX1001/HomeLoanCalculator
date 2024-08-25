@@ -8,7 +8,13 @@ interface CompoInputProps {
   onChangeInputValue: (value: number) => void;
 }
 
-function ComboInput({ id, name, title, placeholder, onChangeInputValue }: CompoInputProps) {
+function ComboInput({
+  id,
+  name,
+  title,
+  placeholder,
+  onChangeInputValue,
+}: CompoInputProps) {
   const [value, setValue] = useState<number>(0);
 
   /* event.target.value is set with the slider thumb or directly in the inputfield  */
@@ -18,7 +24,6 @@ function ComboInput({ id, name, title, placeholder, onChangeInputValue }: CompoI
   };
 
   return (
-
     <div className={styles.inputGroup}>
       <label className={styles.labelInputGroup}>
         <h3 className={styles.h3}>{title}</h3>
@@ -29,12 +34,9 @@ function ComboInput({ id, name, title, placeholder, onChangeInputValue }: CompoI
           min="0"
           id={id}
           name={name}
-          value={
-            value ? value : ""
-          }
+          value={value ? value : ""}
           onChange={handleOnChange}
         />
-
       </label>
 
       <input
@@ -49,7 +51,6 @@ function ComboInput({ id, name, title, placeholder, onChangeInputValue }: CompoI
         onChange={handleOnChange}
       />
     </div>
-
   );
 }
 export default ComboInput;

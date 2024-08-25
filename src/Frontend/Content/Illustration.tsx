@@ -6,7 +6,9 @@ interface IllustrationProps {
 }
 
 function Illustration({ alt, src }: IllustrationProps) {
-  return <img className={styles.image} data-testid="image" alt={alt} src={src} />;
+  return (
+    <img className={styles.image} data-testid="image" alt={alt} src={src} />
+  );
 }
 
 export default Illustration;

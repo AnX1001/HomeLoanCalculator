@@ -11,15 +11,12 @@ interface ResultsViewProps {
 
 const {
   equity: { equityRequirement, heading, additionalCosts },
-  result: { heading: {
-    approvedLoan, loanRequirements }
-  }
+  result: {
+    heading: { approvedLoan, loanRequirements },
+  },
 } = textContent;
 
-
 function AllResults({ loanNeed, eligibleLoan }: ResultsViewProps) {
-
-
   return (
     <div className={styles.wrapper}>
       <Result heading={approvedLoan[userLocale]} amount={eligibleLoan} />

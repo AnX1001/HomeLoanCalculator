@@ -5,7 +5,6 @@ interface ResultProps {
   amount: number;
 }
 
-
 function Result({ heading, amount }: ResultProps) {
   return (
     <section className={styles.wrapper}>

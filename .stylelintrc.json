@@ -5,7 +5,7 @@
     {
       "files": ["**/*.scss"],
       "rules": {
-       "property-no-vendor-prefix": null,
+        "property-no-vendor-prefix": null,
         "import-notation": null,
         "selector-class-pattern": null
       }

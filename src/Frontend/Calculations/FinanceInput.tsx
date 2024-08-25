@@ -27,24 +27,46 @@ function FinanceInputs({
 
   const handleInputChange = (
     name: keyof FinancialDetailsType,
-    value: number
+    value: number,
   ) => {
     const updatedDetails = { ...financialDetails, [name]: value };
     setFinancialDetails(updatedDetails);
     onChange(updatedDetails); // Pass the complete, updated state back to the App
   };
 
-
-
-  const { loanInfo: { illustrationText, heading, subHeading, paragraph, instructions }, financeInput } = textContent;
+  const {
+    loanInfo: {
+      illustrationText,
+      heading,
+      subHeading,
+      paragraph,
+      instructions,
+    },
+    financeInput,
+  } = textContent;
 
   const sliderInputs = [
-    { name: 'propertyPrice', title: financeInput.propertyPrice[userLocale], placeholder: financeInput.propertyPrice[userLocale] },
-    { name: 'equity', title: financeInput.equity[userLocale], placeholder: financeInput.equity[userLocale] },
-    { name: 'debt', title: financeInput.debt[userLocale], placeholder: financeInput.debt[userLocale] },
-    { name: 'income', title: financeInput.income[userLocale], placeholder: financeInput.income[userLocale] },
+    {
+      name: "propertyPrice",
+      title: financeInput.propertyPrice[userLocale],
+      placeholder: financeInput.propertyPrice[userLocale],
+    },
+    {
+      name: "equity",
+      title: financeInput.equity[userLocale],
+      placeholder: financeInput.equity[userLocale],
+    },
+    {
+      name: "debt",
+      title: financeInput.debt[userLocale],
+      placeholder: financeInput.debt[userLocale],
+    },
+    {
+      name: "income",
+      title: financeInput.income[userLocale],
+      placeholder: financeInput.income[userLocale],
+    },
   ];
-
 
   return (
     <div className={styles.wrapper}>
