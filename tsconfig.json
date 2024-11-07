@@ -16,5 +16,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "src/frontend/content/.tsx"]
+  "include": ["src", "src/features/content/.tsx"]
 }
