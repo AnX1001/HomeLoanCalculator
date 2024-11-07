@@ -1,12 +1,14 @@
-import { useState } from "react";
-import {
-  CalculationInputsView,
-  AllResults,
-  CalculateLoanNeed,
-  CalculateEligibleLoan,
+import { useState } from 'react';
+import FinanceInputs, {
   FinancialDetailsType,
-} from "./AppIndex";
-import "./features/design/style/Main.scss";
+} from './features/calculations/FinanceInput';
+
+import {
+  CalculateEligibleLoan,
+  CalculateLoanNeed,
+} from './features/calculations/Formulas';
+
+import Summary from './features/summary/Summary';
 
 function App() {
   // eslint-disable-next-line
@@ -41,8 +43,8 @@ function App() {
 
   return (
     <div className="App">
-      <CalculationInputsView onChange={getAllValues} />
-      <AllResults loanNeed={loanNeed} eligibleLoan={eligibleLoan} />
+      <FinanceInputs onChange={getAllValues} />
+      <Summary loanNeed={loanNeed} eligibleLoan={eligibleLoan} />
     </div>
   );
 }

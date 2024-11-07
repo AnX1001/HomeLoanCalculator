@@ -1,8 +1,9 @@
 import Result from "./Result";
-import styles from "../design/style/AllResults.module.scss";
-import { EquitySection } from "./index";
-import textContent from "../content/textContent.json";
-import { userLocale } from "../content/languageUtil";
+import styles from "./summary.module.scss";
+ 
+import textContent from '../../textContent/textContent.json';
+import { userLocale } from "../../utils/languageUtil";
+import EquitySection from "./EquitySection";
 
 interface ResultsViewProps {
   loanNeed: number;
@@ -16,7 +17,7 @@ const {
   },
 } = textContent;
 
-function AllResults({ loanNeed, eligibleLoan }: ResultsViewProps) {
+function Summary({ loanNeed, eligibleLoan }: ResultsViewProps) {
   return (
     <div className={styles.wrapper}>
       <Result heading={approvedLoan[userLocale]} amount={eligibleLoan} />
@@ -29,4 +30,4 @@ function AllResults({ loanNeed, eligibleLoan }: ResultsViewProps) {
   );
 }
 
-export default AllResults;
+export default Summary;

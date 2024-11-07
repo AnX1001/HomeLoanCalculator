@@ -1,8 +1,11 @@
-import styles from "../design/style/Inputs.module.scss";
-import { useState } from "react";
-import { Illustration, ComboInput, LoanInfo, Logo } from "./index";
-import textContent from "../content/textContent.json";
-import { userLocale } from "../content/languageUtil";
+import Illustration from '../introduction/Illustration';
+import { userLocale } from '../../utils/languageUtil';
+import LoanInfo from '../introduction/LoanInfo';
+import styles from './inputs.module.scss';
+import { useState } from 'react';
+import ComboInput from './ComboInput';
+ import  textContent  from  '../../textContent/textContent.json';
+import Logo from '../../assets/images/Logo.svg';
 
 export interface FinancialDetailsType {
   propertyPrice: number;
@@ -27,7 +30,7 @@ function FinanceInputs({
 
   const handleInputChange = (
     name: keyof FinancialDetailsType,
-    value: number,
+    value: number
   ) => {
     const updatedDetails = { ...financialDetails, [name]: value };
     setFinancialDetails(updatedDetails);
@@ -47,22 +50,22 @@ function FinanceInputs({
 
   const sliderInputs = [
     {
-      name: "propertyPrice",
+      name: 'propertyPrice',
       title: financeInput.propertyPrice[userLocale],
       placeholder: financeInput.propertyPrice[userLocale],
     },
     {
-      name: "equity",
+      name: 'equity',
       title: financeInput.equity[userLocale],
       placeholder: financeInput.equity[userLocale],
     },
     {
-      name: "debt",
+      name: 'debt',
       title: financeInput.debt[userLocale],
       placeholder: financeInput.debt[userLocale],
     },
     {
-      name: "income",
+      name: 'income',
       title: financeInput.income[userLocale],
       placeholder: financeInput.income[userLocale],
     },

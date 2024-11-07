@@ -18,7 +18,7 @@ function LoanInfo({
       <h1>{title}</h1>
       {imageElement}
       <h2>{subtitle}</h2>
-      <p>{paragraph}</p>
+      <p>{paragraph}</p> 
       <p>{instructions}</p>
     </div>
   );

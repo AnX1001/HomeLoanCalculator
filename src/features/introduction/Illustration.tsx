@@ -1,4 +1,4 @@
-import styles from "../design/style/Illustration.module.scss";
+import styles from "./illustration.module.scss";
 
 interface IllustrationProps {
   src: string;
@@ -6,7 +6,7 @@ interface IllustrationProps {
 }
 
 function Illustration({ alt, src }: IllustrationProps) {
-  return (
+  return ( 
     <img className={styles.image} data-testid="image" alt={alt} src={src} />
   );
 }

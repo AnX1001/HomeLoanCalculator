@@ -1,4 +1,4 @@
-import styles from "../design/style/EquitySection.module.scss";
+import styles from "./equitySection.module.scss";
 
 interface EquitySectionProps {
   heading: string;
