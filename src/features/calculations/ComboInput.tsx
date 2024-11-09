@@ -17,6 +17,8 @@ function ComboInput({
 }: CompoInputProps) {
   const [value, setValue] = useState<number>(0);
 
+  const textInputId = `${id}-text`;
+  const rangeInputId = `${id}-range`;
   /* event.target.value is set with the slider thumb or directly in the inputfield  */
   const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(Number(event.target.value));
@@ -32,7 +34,7 @@ function ComboInput({
           placeholder={placeholder}
           type="text"
           min="0"
-          id={id}
+          id={textInputId}
           name={name}
           value={value ? value : ""}
           onChange={handleOnChange}
@@ -40,7 +42,7 @@ function ComboInput({
       </label>
 
       <input
-        id={id}
+        id={rangeInputId}
         name={name}
         aria-label="velg sum"
         className={styles.inputSlider}
