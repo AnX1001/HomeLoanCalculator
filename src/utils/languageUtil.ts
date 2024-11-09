@@ -1,4 +1,4 @@
-import textContent from "../textContent/textContent.json";
+import mortageContent from "../mortageContent/mortageContent.json";
 
 export const userLocale =
-  navigator.language as keyof typeof textContent.supportedLanguages;
+  navigator.language as keyof typeof mortageContent.supportedLanguages;

@@ -1,7 +1,7 @@
 import Result from "./Result";
 import styles from "./summary.module.scss";
  
-import textContent from '../../textContent/textContent.json';
+import textContent from '../../mortageContent/mortageContent.json';
 import { userLocale } from "../../utils/languageUtil";
 import EquitySection from "./EquitySection";
 

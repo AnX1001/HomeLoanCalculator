@@ -1,10 +1,10 @@
-import Illustration from '../introduction/Illustration';
+import Illustration from '../loanInfo/Illustration';
 import { userLocale } from '../../utils/languageUtil';
-import LoanInfo from '../introduction/LoanInfo';
+import LoanInfo from '../loanInfo/LoanInfo';
 import styles from './inputs.module.scss';
 import { useState } from 'react';
 import ComboInput from './ComboInput';
- import  textContent  from  '../../textContent/textContent.json';
+import textContent from '../../mortageContent/mortageContent.json';
 import Logo from '../../assets/images/Logo.svg';
 
 export interface FinancialDetailsType {
@@ -48,6 +48,7 @@ function FinanceInputs({
     financeInput,
   } = textContent;
 
+ 
   const sliderInputs = [
     {
       name: 'propertyPrice',
