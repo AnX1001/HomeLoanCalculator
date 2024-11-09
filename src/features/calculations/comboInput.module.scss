@@ -1,4 +1,4 @@
-@use "../../Main" as *;
+@use '../../Main' as *;
 
 .h3 {
   margin-bottom: $spacing-xs;
@@ -11,7 +11,8 @@
 input {
   font-size: 12px;
   width: 100%;
-  height: 30px;
+  max-width: 400px;
+  height: 44px;
   border: 1.9px solid $lightBackground;
   border-radius: 4px;
   margin-right: 5px;
@@ -19,10 +20,11 @@ input {
 
 .inputSlider {
   width: 100%;
+  max-width: 380px;
   border: none;
   margin-top: $spacing-xxl;
   margin-bottom: $spacing-xs * 2;
-  background-color: $lightgrey;
+  background-color: $lightBackground; /* Track background */
   height: 12px;
   margin-left: 20px;
   border-radius: 3px;
@@ -55,6 +57,14 @@ input {
     height: 9px;
     width: 100%;
     border-radius: 2px;
+  }
+
+  &:focus::-webkit-slider-thumb {
+    background-color: $customYellow;
+  }
+
+  &:focus::-moz-range-thumb {
+    background-color: $customYellow;
   }
 }
 
