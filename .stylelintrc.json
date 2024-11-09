@@ -5,6 +5,7 @@
     {
       "files": ["**/*.scss"],
       "rules": {
+        "at-rule-no-unknown": null,
         "property-no-vendor-prefix": null,
         "import-notation": null,
         "selector-class-pattern": null
