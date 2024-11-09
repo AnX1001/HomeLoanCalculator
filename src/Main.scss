@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Red+Hat+Text:wght@500&display=swap");
 
-/* Remove margin and padding from the body */
-
+/* Reset */
 html,
 body {
   padding: 0;
@@ -13,16 +12,16 @@ body {
 }
 
 /* Colors */
-
 $darkBackground: #376174;
 $lightBackground: #5291a6;
 $customYellow: #ffde9f;
 $customBeige: #fdf9f2;
 $lightgrey: #d9d9d9;
 
+/* Shadows */
 $lightShadow: 0 3px 5px 1px $lightgrey;
 
-/* Spacing: 5, 10, 15, 30, 40, 50px in height  */
+/* Spacing */
 $spacing-xs: 5px;
 $spacing-sm: 10px;
 $spacing-md: 15px;
@@ -30,13 +29,12 @@ $spacing-lg: 30px;
 $spacing-xl: 40px;
 $spacing-xxl: 50px;
 
-/* Font weight: 400, 500 */
+/* Font Weights */
 $font-weight-normal: 400;
 $font-weight-medium: 500;
 $font-weight-large: 700;
 
-/* Typography using fonts Poppins and Red Hat Text from Google Fonts */
-
+/* Typography */
 h1,
 .largeHeading {
   font-family: Poppins, sans-serif;
@@ -46,8 +44,8 @@ h1,
 
 h2 {
   font-family: "Red Hat Text", sans-serif;
+  font-size: 1.25rem;
   line-height: 150%;
-  font-size: 22.5px, 1.25rem;
 }
 
 h3 {
@@ -59,19 +57,19 @@ h3 {
 h4 {
   font-size: 0.8rem;
   line-height: 150%;
-  font-weight: 500;
+  font-weight: $font-weight-medium;
 }
 
 p {
   font-family: "Red Hat Text", sans-serif;
   font-size: 1rem;
   line-height: 150%;
-  font-weight: 400;
+  font-weight: $font-weight-normal;
 }
 
 .smallerParagraph {
   font-family: "Red Hat Text", sans-serif;
   font-size: 0.8rem;
   line-height: 150%;
-  font-weight: 400;
+  font-weight: $font-weight-normal;
 }

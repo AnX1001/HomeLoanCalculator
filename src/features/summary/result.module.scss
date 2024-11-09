@@ -4,15 +4,15 @@ $fontPrimary: "Red Hat Text", sans-serif;
 $fontSecondary: "Poppins", sans-serif;
 
 .wrapper {
-  color: $customYellow;
+  display: grid;
   justify-content: center;
   max-width: 450px;
-  display: grid;
+  color: $customYellow;
 }
 
 .amount,
 .negativeAmount {
-  font-family: Poppins, sans-serif;
+  font-family: $fontSecondary;
   font-size: 32px;
   margin: 0;
   text-align: center;
@@ -23,7 +23,7 @@ $fontSecondary: "Poppins", sans-serif;
 }
 
 .heading {
-  font-family: "Red Hat Text", sans-serif;
+  font-family: $fontPrimary;
   font-size: 1rem;
   text-align: center;
   font-weight: $font-weight-normal;

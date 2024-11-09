@@ -1,14 +1,14 @@
 @import "../../Main";
 
 .wrapper {
-  color: $customYellow;
-  margin-top: $spacing-xxl;
-  max-width: 450px;
   display: grid;
   justify-content: center;
+  max-width: 450px;
+  margin-top: $spacing-xxl;
+  color: $customYellow;
 
   .heading {
-    line-height: 5%;
     font-weight: $font-weight-medium;
+    line-height: 5%;
   }
 }
