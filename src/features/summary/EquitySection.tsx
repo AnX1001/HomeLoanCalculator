@@ -8,7 +8,7 @@ interface EquitySectionProps {
 function EquitySection({ heading, children }: EquitySectionProps) {
   return (
     <section className={styles.wrapper}>
-      <h1 className={styles.heading}>{heading}</h1>
+      <h2 className={styles.heading}>{heading}</h2>
       {children}
     </section>
   );
