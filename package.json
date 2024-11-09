@@ -3,10 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^6.4.2",
-    "@testing-library/react": "^15.0.5",
-    "@testing-library/user-event": "^14.5.2",
-    "@types/jest": "^29.5.12",
     "@types/node": "^20.12.7",
     "@types/react": "^18.2.79",
     "@types/react-dom": "^18.2.25",
@@ -49,6 +45,10 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^15.0.5",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "^29.5.12",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@eslint/js": "^9.5.0",
     "eslint": "^8.0.0",
