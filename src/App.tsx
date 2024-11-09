@@ -43,8 +43,12 @@ function App() {
 
   return (
     <div className="App">
-      <FinanceInputs onChange={getAllValues} />
-      <Summary loanNeed={loanNeed} eligibleLoan={eligibleLoan} />
+      <main>
+        <FinanceInputs onChange={getAllValues} />
+      </main>
+      <footer>
+        <Summary loanNeed={loanNeed} eligibleLoan={eligibleLoan} />
+      </footer>
     </div>
   );
 }
