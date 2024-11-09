@@ -1,4 +1,4 @@
-@import "../../Main";
+@use "../../Main" as *;
 
 .wrapper {
   padding: $spacing-xxl $spacing-lg $spacing-lg $spacing-lg;
