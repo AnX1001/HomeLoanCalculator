@@ -1,5 +1,7 @@
 echo "🐶 Pre-commit hook by Husky started"
+echo "🚨 Checking unit tests..."
 
+# Run tests
 npm run test -- --watchAll=false
 if [ $? -ne 0 ]; then
   echo "❌ Tests failed. Aborting commit."
