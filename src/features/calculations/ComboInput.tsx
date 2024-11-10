@@ -1,5 +1,6 @@
-import { useState } from "react";
-import styles from "./comboInput.module.scss";
+import { useState } from 'react';
+import styles from './comboInput.module.scss';
+import { useSliderBackground } from '../../utils/sliderUtils';
 interface CompoInputProps {
   title: string;
   id: string;
@@ -25,6 +26,11 @@ function ComboInput({
     onChangeInputValue(Number(event.target.value));
   };
 
+  const sliderRef = useSliderBackground({
+    color: '#376174',
+    backgroundColor: '#d3d3d3',
+  });
+
   return (
     <div className={styles.inputGroup}>
       <label className={styles.labelInputGroup}>
@@ -36,12 +42,13 @@ function ComboInput({
           min="0"
           id={textInputId}
           name={name}
-          value={value ? value : ""}
+          value={value ? value : ''}
           onChange={handleOnChange}
         />
       </label>
 
       <input
+        ref={sliderRef}
         id={rangeInputId}
         name={name}
         aria-label="velg sum"
