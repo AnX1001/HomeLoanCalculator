@@ -20,10 +20,20 @@ function ComboInput({
 
   const textInputId = `${id}-text`;
   const rangeInputId = `${id}-range`;
-  /* event.target.value is set with the slider thumb or directly in the inputfield  */
+  
   const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(Number(event.target.value));
-    onChangeInputValue(Number(event.target.value));
+
+    //to ensure valid formatting with intl.numberformat
+    const rawValue = event.target.value.replace(/\s/g, '').replace(/,/g, '');  
+
+    if (!isNaN(Number(rawValue))) {
+      const numericValue = Number(rawValue);
+      setValue(numericValue); 
+      onChangeInputValue(numericValue);  
+    }  else {
+      setValue(0);
+  
+    }
   };
 
   const sliderRef = useSliderBackground({
@@ -42,7 +52,7 @@ function ComboInput({
           min="0"
           id={textInputId}
           name={name}
-          value={value ? value : ''}
+          value={value ? new Intl.NumberFormat("no-NO").format(value) : ''}
           onChange={handleOnChange}
         />
       </label>
