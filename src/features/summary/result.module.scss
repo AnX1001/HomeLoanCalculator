@@ -1,7 +1,7 @@
-@use "../../Main" as *;
+@use '../../Main' as *;
 
-$fontPrimary: "Red Hat Text", sans-serif;
-$fontSecondary: "Poppins", sans-serif;
+$fontPrimary: 'Red Hat Text', sans-serif;
+$fontSecondary: 'Poppins', sans-serif;
 
 .wrapper {
   display: grid;
@@ -10,16 +10,11 @@ $fontSecondary: "Poppins", sans-serif;
   color: $customYellow;
 }
 
-.amount,
-.negativeAmount {
+.amount {
   font-family: $fontSecondary;
   font-size: 32px;
   margin: 0;
   text-align: center;
-}
-
-.negativeAmount {
-  color: white;
 }
 
 .heading {
@@ -27,7 +22,4 @@ $fontSecondary: "Poppins", sans-serif;
   font-size: 1.2rem;
   text-align: center;
   font-weight: $font-weight-large;
- 
 }
-
- 

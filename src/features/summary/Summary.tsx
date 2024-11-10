@@ -20,7 +20,7 @@ const {
 function Summary({ loanNeed, eligibleLoan }: ResultsViewProps) {
   return (
     <div className={styles.wrapper}>
-      <Result heading={approvedLoan[userLocale]} amount={eligibleLoan} />
+      <Result approvedLoan heading={approvedLoan[userLocale]} amount={eligibleLoan} />
       <Result heading={loanRequirements[userLocale]} amount={loanNeed} />
       <EquitySection heading={heading[userLocale]}>
         <p>{equityRequirement[userLocale]}</p>
