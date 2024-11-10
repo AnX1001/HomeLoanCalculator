@@ -1,8 +1,12 @@
-
 echo "🐶 Pre-commit hook by Husky started"
+
+npm run test -- --watchAll=false
+if [ $? -ne 0 ]; then
+  echo "❌ Tests failed. Aborting commit."
+  exit 1
+fi
 
 # Run lint-staged
 npx lint-staged
-
 
 echo "🐕 Pre-commit hook finished"
