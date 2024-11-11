@@ -1,11 +1,12 @@
-import Illustration from '../loanInfo/Illustration';
-import { userLocale } from '../../utils/languageUtil';
+
+import { userLocale } from '../../../utils/languageUtil';
 import LoanInfo from '../loanInfo/LoanInfo';
 import styles from './inputs.module.scss';
 import { useState } from 'react';
 import ComboInput from './ComboInput';
-import textContent from '../../mortageContent/mortageContent.json';
-import Logo from '../../assets/images/Logo.svg';
+import textContent from '../../../mortageContent/mortageContent.json';
+import Logo from '../../../assets/images/Logo.svg';
+import Illustration from '../loanInfo/Illustration';
 
 export interface FinancialDetailsType {
   propertyPrice: number;

@@ -1,0 +1,41 @@
+@use "../Main.scss" as *;
+
+$fontPrimary: "Red Hat Text", sans-serif;
+$fontSecondary: "Poppins", sans-serif;
+
+.header {
+  background: $customBeige;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+  padding: 25px;
+  margin-right: 25px;
+  justify-content: flex-end;
+  font-family: $fontPrimary;
+
+  li {
+    a {
+      color: $darkBackground;
+      text-decoration: none;
+
+      &:hover {
+        color: $lightBackground;
+      }
+    }
+  }
+}
+
+.navList {
+  padding: 0;
+  margin: 0;
+
+  .navItem {
+    color: red;
+  }
+}

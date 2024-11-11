@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './comboInput.module.scss';
-import { useSliderBackground } from '../../utils/sliderUtils';
+import { useSliderBackground } from '../../../utils/sliderUtils';
 interface CompoInputProps {
   title: string;
   id: string;

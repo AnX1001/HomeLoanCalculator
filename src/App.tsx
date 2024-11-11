@@ -1,14 +1,19 @@
-import { useState } from 'react';
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./Layout";
+
 import FinanceInputs, {
   FinancialDetailsType,
-} from './features/calculations/FinanceInput';
+} from "./features/home/calculations/FinanceInput";
 
 import {
   CalculateEligibleLoan,
   CalculateLoanNeed,
-} from './features/calculations/Formulas';
+} from "./features/home/calculations/Formulas";
 
-import Summary from './features/summary/Summary';
+import Summary from "./features/home/summary/Summary";
+
+import Blog from './features/blog/Blog';
 
 function App() {
   // eslint-disable-next-line
@@ -42,14 +47,22 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <main>
-        <FinanceInputs onChange={getAllValues} />
-      </main>
-      <footer>
-        <Summary loanNeed={loanNeed} eligibleLoan={eligibleLoan} />
-      </footer>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route
+            index
+            element={
+              <>
+                <FinanceInputs onChange={getAllValues} />
+                <Summary loanNeed={loanNeed} eligibleLoan={eligibleLoan} />
+              </>
+            }
+          />
+          <Route path="blog" element={<Blog />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
