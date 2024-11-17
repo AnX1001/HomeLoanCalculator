@@ -7,6 +7,7 @@ import ComboInput from './ComboInput';
 import textContent from '../../../mortageContent/mortageContent.json';
 import Logo from '../../../assets/images/Logo.svg';
 import Illustration from '../loanInfo/Illustration';
+import { sliderInputs} from './sliderInputsConfig';
 
 export interface FinancialDetailsType {
   propertyPrice: number;
@@ -46,32 +47,7 @@ function FinanceInputs({
       paragraph,
       instructions,
     },
-    financeInput,
   } = textContent;
-
- 
-  const sliderInputs = [
-    {
-      name: 'propertyPrice',
-      title: financeInput.propertyPrice[userLocale],
-      placeholder: financeInput.propertyPrice[userLocale],
-    },
-    {
-      name: 'equity',
-      title: financeInput.equity[userLocale],
-      placeholder: financeInput.equity[userLocale],
-    },
-    {
-      name: 'debt',
-      title: financeInput.debt[userLocale],
-      placeholder: financeInput.debt[userLocale],
-    },
-    {
-      name: 'income',
-      title: financeInput.income[userLocale],
-      placeholder: financeInput.income[userLocale],
-    },
-  ];
 
   return (
     <div className={styles.wrapper}>
