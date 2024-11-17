@@ -10,8 +10,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.28.0",
     "react-scripts": "5.0.1",
-    "typescript": "^5.4.5",
-    "web-vitals": "^3.5.2"
+    "typescript": "^5.4.5"
   },
   "overrides": {
     "sass-loader": "^16.0.3",
