@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-
+test.use({ launchOptions: { slowMo: 5000 } });
 test("should navigate to the blog page when the blog link is clicked", async ({
   page,
 }) => {

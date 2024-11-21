@@ -1,12 +1,23 @@
 echo "🐶 Pre-commit hook by Husky started"
 echo "🚨 Checking unit tests..."
 
-# Run tests
+# Run unit tests
 npm run test -- --watchAll=false
 if [ $? -ne 0 ]; then
   echo "❌ Tests failed. Aborting commit."
   exit 1
 fi
+
+echo "🎭 Running PlayWright tests"
+
+# Run e2e tests
+npm run test:e2e
+if [$? -ne 0 ]; then
+  echo "❌ E2E tests failed. Aborting commit."
+  exit 1
+fi
+
+
 
 # Run lint-staged
 npx lint-staged

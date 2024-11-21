@@ -26,6 +26,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:e2e": "playwright test",
     "eject": "react-scripts eject",
     "lint": "eslint \"src/**/*.{js,mjs,cjs,ts,jsx,tsx}\"",
     "lint:css": "stylelint \"src/**/*.{css,scss}\"",
