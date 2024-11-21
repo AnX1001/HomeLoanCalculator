@@ -7,7 +7,7 @@ function Blog() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.innerWrapper}>
-        <h1>Lorem ipsum, dolor sit amet consectetur. </h1>
+        <h1>Blog tittel ipsum, dolor sit amet</h1>
         <Illustration src={Budget} alt='Bilde av spare person'></Illustration>
         <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit error facere ratione, animi odio delectus.</h2>
         <p>
