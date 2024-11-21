@@ -12,3 +12,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 - [Code Quality](src/docs/CodeQuality.md)
 - [Loan State Flow Diagram](src/docs/LoanStateFlowDiagram.md)
+
+### Testing 
+
+- Unit test (Jest)
+- End to end test (PlayWright)
