@@ -1,0 +1,28 @@
+
+name: Run Tests on Push
+
+on: [push]
+
+jobs:
+  Run-unit-tests-and-e2e-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: "echo 🧪 Initiating GitHub Actions workflow: Running unit and end-to-end (E2E) tests..."
+      - name: Checkout respository 
+        uses: actions/checkout@v4
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+
+      - name: Install dependencies
+        run: npm Install
+
+      - name: Run unit tests
+        run: npm test
+      
+      - name: Run e2e tests
+        run: npm test:e2e
+
+
+  
