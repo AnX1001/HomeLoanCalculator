@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: "echo 🧪 Initiating GitHub Actions workflow: Running unit and end-to-end (E2E) tests..."
+      - run: echo "🧪 Initiating GitHub Actions workflow. Running unit and end-to-end (E2E) tests..."
       - name: Checkout respository 
         uses: actions/checkout@v4
       
@@ -16,13 +16,16 @@ jobs:
         uses: actions/setup-node@v4
 
       - name: Install dependencies
-        run: npm Install
+        run: npm install
 
       - name: Run unit tests
-        run: npm test
+        run: npm run test
       
+      - name: Install Playwright browsers
+        run: npx playwright install
+
       - name: Run e2e tests
-        run: npm test:e2e
+        run: npm run test:e2e
 
 
   
