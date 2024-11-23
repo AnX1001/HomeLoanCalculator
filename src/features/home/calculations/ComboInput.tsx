@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import styles from './comboInput.module.scss';
-import { useSliderBackground } from '../../../utils/sliderUtils';
+import { useState } from "react";
+import styles from "./comboInput.module.scss";
+import { useSliderBackground } from "../../../utils/sliderUtils";
 interface CompoInputProps {
   title: string;
   id: string;
@@ -20,25 +20,23 @@ function ComboInput({
 
   const textInputId = `${id}-text`;
   const rangeInputId = `${id}-range`;
-  
-  const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 
+  const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     //to ensure valid formatting with intl.numberformat
-    const rawValue = event.target.value.replace(/\s/g, '').replace(/,/g, '');  
+    const rawValue = event.target.value.replace(/\s/g, "").replace(/,/g, "");
 
     if (!isNaN(Number(rawValue))) {
       const numericValue = Number(rawValue);
-      setValue(numericValue); 
-      onChangeInputValue(numericValue);  
-    }  else {
+      setValue(numericValue);
+      onChangeInputValue(numericValue);
+    } else {
       setValue(0);
-  
     }
   };
 
   const sliderRef = useSliderBackground({
-    color: '#376174',
-    backgroundColor: '#d3d3d3',
+    color: "#376174",
+    backgroundColor: "#d3d3d3",
   });
 
   return (
@@ -52,7 +50,7 @@ function ComboInput({
           min="0"
           id={textInputId}
           name={name}
-          value={value ? new Intl.NumberFormat("no-NO").format(value) : ''}
+          value={value ? new Intl.NumberFormat("no-NO").format(value) : ""}
           onChange={handleOnChange}
         />
       </label>

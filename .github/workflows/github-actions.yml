@@ -1,4 +1,3 @@
-
 name: Run Tests on Push
 
 on: [push]
@@ -9,9 +8,9 @@ jobs:
 
     steps:
       - run: echo "🧪 Initiating GitHub Actions workflow. Running unit and end-to-end (E2E) tests..."
-      - name: Checkout respository 
+      - name: Checkout respository
         uses: actions/checkout@v4
-      
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
 
@@ -20,12 +19,9 @@ jobs:
 
       - name: Run unit tests
         run: npm run test
-      
+
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
       - name: Run e2e tests
         run: npm run test:e2e
-
-
-  

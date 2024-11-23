@@ -21,7 +21,8 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [userLocale, setUserLocale] = useState<SupportedLangs>("nb");
 
-  useEffect(() => { //TODO: refactor without using useEffect
+  useEffect(() => {
+    //TODO: refactor without using useEffect
     const browserLocale = navigator.language;
     if (isSupportedLang(browserLocale)) {
       setUserLocale(browserLocale);
