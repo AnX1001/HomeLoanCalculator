@@ -13,7 +13,7 @@ import {
 
 import Summary from "./features/home/summary/Summary";
 
-import Blog from './features/blog/Blog';
+import Blog from "./features/blog/Blog";
 
 function App() {
   // eslint-disable-next-line
@@ -47,14 +47,11 @@ function App() {
   };
 
   return (
-    <BrowserRouter 
-    future={{
-      v7_startTransition: true,
-      v7_relativeSplatPath: true,
-     
-
-    }}
-    
+    <BrowserRouter
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true,
+      }}
     >
       <Routes>
         <Route path="/" element={<Layout />}>

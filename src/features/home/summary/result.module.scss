@@ -1,7 +1,7 @@
-@use '../../../Main' as *;
+@use "../../../Main" as *;
 
-$fontPrimary: 'Red Hat Text', sans-serif;
-$fontSecondary: 'Poppins', sans-serif;
+$fontPrimary: "Red Hat Text", sans-serif;
+$fontSecondary: "Poppins", sans-serif;
 
 .wrapper {
   display: grid;

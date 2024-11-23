@@ -1,7 +1,7 @@
 import Result from "./Result";
 import styles from "./summary.module.scss";
- 
-import textContent from '../../../mortageContent/mortageContent.json';
+
+import textContent from "../../../mortageContent/mortageContent.json";
 import { userLocale } from "../../../utils/languageUtil";
 import EquitySection from "./EquitySection";
 
@@ -20,7 +20,11 @@ const {
 function Summary({ loanNeed, eligibleLoan }: ResultsViewProps) {
   return (
     <div className={styles.wrapper}>
-      <Result approvedLoan heading={approvedLoan[userLocale]} amount={eligibleLoan} />
+      <Result
+        approvedLoan
+        heading={approvedLoan[userLocale]}
+        amount={eligibleLoan}
+      />
       <Result heading={loanRequirements[userLocale]} amount={loanNeed} />
       <EquitySection heading={heading[userLocale]}>
         <p>{equityRequirement[userLocale]}</p>

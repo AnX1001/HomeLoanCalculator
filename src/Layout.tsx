@@ -4,7 +4,7 @@ import Header from "./shared/Header";
 function Layout() {
   return (
     <div className="App">
-      <Header/>
+      <Header />
       <main>
         <Outlet />
       </main>
