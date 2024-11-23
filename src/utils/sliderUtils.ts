@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 interface UseSliderBackgroundProps {
   backgroundColor: string;
@@ -22,11 +22,11 @@ export const useSliderBackground = ({
       slider.style.background = `linear-gradient(to right, ${color} ${percentage}%, ${backgroundColor} ${percentage}%)`;
     };
 
-    slider.addEventListener('input', updateSliderBackground);
+    slider.addEventListener("input", updateSliderBackground);
     updateSliderBackground();
 
     return () => {
-      slider.removeEventListener('input', updateSliderBackground);
+      slider.removeEventListener("input", updateSliderBackground);
     };
   }, [color, backgroundColor]);
 
