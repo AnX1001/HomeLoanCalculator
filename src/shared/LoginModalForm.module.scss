@@ -42,7 +42,7 @@
     input {
       color: black;
       font-size: medium;
-      padding: 10px;
+      padding: $spacing-sm;
       margin-top: 6px;
     }
 
@@ -56,7 +56,7 @@
       font-family: "Red Hat Text", sans-serif;
       color: black;
       border: none;
-      padding: 10px;
+      padding: $spacing-sm;
       width: 100%;
       border-radius: 5px;
       cursor: pointer;
