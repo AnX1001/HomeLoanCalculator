@@ -1,3 +1,4 @@
+import useEscapeKey from "./useScapeKey"
 import style from "./LoginModalForm.module.scss";
 
 interface LoginModalFormProps {
@@ -10,6 +11,9 @@ function LoginModalForm({ open, setOpen }: LoginModalFormProps) {
     event.preventDefault();
     
   };
+
+  useEscapeKey(() => setOpen(false), open)
+  //TODO: add focus trap
 
   return (
     <dialog className={style.dialog} open={open}>
