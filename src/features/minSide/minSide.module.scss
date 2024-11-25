@@ -1,0 +1,15 @@
+@use "../../Main" as *;
+
+.wrapper {
+  display: grid;
+  justify-content: center;
+  background-color: $customBeige;
+  padding: $spacing-xxl $spacing-lg $spacing-lg $spacing-lg;
+
+  .innerWrapper {
+    max-width: 450px;
+    display: grid;
+    justify-content: center;
+  
+  }
+}

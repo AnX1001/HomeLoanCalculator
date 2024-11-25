@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
+import '../src/firebase/firebase';
+
 
 import FinanceInputs, {
   FinancialDetailsType,
@@ -14,6 +16,7 @@ import {
 import Summary from "./features/home/summary/Summary";
 
 import Blog from "./features/blog/Blog";
+import MinSide from "./features/minSide/MinSide";
 
 function App() {
   // eslint-disable-next-line
@@ -65,6 +68,7 @@ function App() {
             }
           />
           <Route path="blog" element={<Blog />} />
+          <Route path="minside" element={<MinSide />}/>
         </Route>
       </Routes>
     </BrowserRouter>
