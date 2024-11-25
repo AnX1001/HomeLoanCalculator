@@ -1,4 +1,5 @@
-import { defineConfig, devices } from "@playwright/test";
+import {test as base , defineConfig, devices } from "@playwright/test";
+
 
 export default defineConfig({
   testDir: "./e2e-tests",
@@ -50,3 +51,5 @@ export default defineConfig({
     reuseExistingServer: !process.env.CI,
   },
 });
+
+
