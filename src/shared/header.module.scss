@@ -10,8 +10,23 @@ $fontSecondary: "Poppins", sans-serif;
  
 }
 
+
+.loginButton {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: $fontPrimary;
+  color: $darkBackground;
+  font-size: $font-size-sm;
+
+  &:hover {
+    color: $lightBackground;
+  }
+}
+
 ul {
   margin: 0;
+  align-items: baseline;
   list-style-type: none;
   display: flex;
   gap: 15px;

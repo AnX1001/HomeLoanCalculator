@@ -3,8 +3,12 @@ import { Link } from "react-router-dom";
 import LoginFormModal from "./LoginModalForm";
 import style from "./header.module.scss";
 
+
 function Header() {
   const [open, setOpen] = useState(false);
+
+  
+
   return (
     <header className={style.header}>
       <nav>
@@ -16,9 +20,12 @@ function Header() {
             <Link to={"/blog"}>Blogg</Link>
           </li>
           <li>
-            <Link onClick={() => setOpen((prevState) => !prevState)} to={"/"}>
-              🔒 Min side
-            </Link>
+            <Link to={"/minside"}>Min side</Link>
+          </li>
+          <li>
+            <button className={style.loginButton} onClick={() => setOpen((prevState) => !prevState)}>
+              🔒 Logg på
+            </button>
             <LoginFormModal setOpen={setOpen} open={open} />
           </li>
         </ul>
