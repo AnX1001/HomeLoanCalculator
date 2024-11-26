@@ -16,7 +16,8 @@ import {
 import Summary from "./features/home/summary/Summary";
 
 import Blog from "./features/blog/Blog";
-import MinSide from "./features/minSide/MinSide";
+import ProtectedRoute from "./features/minSide/ProtectedRoute";
+import { AuthProvider } from "./firebase/AuthProvider";
 
 function App() {
   // eslint-disable-next-line
@@ -50,7 +51,8 @@ function App() {
   };
 
   return (
-    <BrowserRouter
+    <AuthProvider>
+        <BrowserRouter
       future={{
         v7_startTransition: true,
         v7_relativeSplatPath: true,
@@ -68,10 +70,12 @@ function App() {
             }
           />
           <Route path="blog" element={<Blog />} />
-          <Route path="minside" element={<MinSide />}/>
+          <Route path="minside" element={<ProtectedRoute />}/>
         </Route>
       </Routes>
     </BrowserRouter>
+    </AuthProvider>
+  
   );
 }
 

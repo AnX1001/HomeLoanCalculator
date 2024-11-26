@@ -1,5 +1,7 @@
-import useEscapeKey from "./useScapeKey"
+import {useState} from "react";
+import useEscapeKey from "./useScapeKey";
 import style from "./LoginModalForm.module.scss";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 interface LoginModalFormProps {
   open: boolean;
@@ -7,22 +9,60 @@ interface LoginModalFormProps {
 }
 
 function LoginModalForm({ open, setOpen }: LoginModalFormProps) {
-  const handleSubmit = (event: React.FormEvent) => {
+  const [emailError, setEmailError] = useState(false);
+
+
+  const auth = getAuth();
+
+
+ 
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    const form = event.currentTarget; 
+    const formData = new FormData(form);
+
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
+
+    if (!email.includes("@")) {
+     
+      setEmailError(true);
+      return;
+    }
+
     
+    
+    signInWithEmailAndPassword(auth, email, password)
+      .then(() => {
+        
+      })
+      .catch((error) => {
+        console.error("Login error:", error.code, error.message);
+      });
+
+    setOpen(false);
   };
 
-  useEscapeKey(() => setOpen(false), open)
-  //TODO: add focus trap
+
+  useEscapeKey(() => setOpen(false), open);
+
+
+
+
+
 
   return (
     <dialog className={style.dialog} open={open}>
       <button onClick={() => setOpen(false)} className={style.closeIconButton}>
         &#x2716;
       </button>
-      <form>
-        <label htmlFor="epost">E-post</label>
-        <input type="text" id="epost" name="epost" required />
+      <form
+        onSubmit={handleSubmit}>
+        <label htmlFor="email">E-post</label>
+        <input type="text" id="email" name="email" required onChange={()=> setEmailError(false)} />
+        <p style={{color: "red", fontSize: "small", marginTop: "-15px"}}>{emailError && "Vennligst oppgi gyldig email"}</p>
         <label htmlFor="password">Passord</label>
         <input
           type="password"
@@ -32,7 +72,7 @@ function LoginModalForm({ open, setOpen }: LoginModalFormProps) {
           autoComplete="current-passord"
         />
         <button
-          onClick={handleSubmit}
+          onClick={() => handleSubmit}
           className={style.loginButton}
           type="submit"
         >

@@ -9,6 +9,7 @@ function MinSide() {
       <div className={styles.innerWrapper}>
         <h1>Hei An!
         </h1>
+        <h2>Du er nå innlogget!</h2>
         <Illustration src={Support} alt="Bilde av spare person"></Illustration>
         <h2>
           Som kunde hos oss, får du tildelt din egen rådgiver som bistår deg med råd og hjelp 24 timer i døgnet. For mer informasjon, se under.
