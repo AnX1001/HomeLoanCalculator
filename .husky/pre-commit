@@ -8,7 +8,7 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-echo "🎭 Running PlayWright tests"
+# echo "🎭 Running PlayWright tests"
 
 # Run e2e tests
 # npm run test:e2e
