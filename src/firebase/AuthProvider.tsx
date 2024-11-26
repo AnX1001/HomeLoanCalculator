@@ -17,15 +17,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     useEffect(() => {
         const auth = getAuth();
 
-        if (process.env.NODE_ENV === "test") {
-            // Mock authentication state for tests
-            setTimeout(() => {
-              setUser(null); 
-              setLoading(false);
-            }, 100); 
-            return () => {};
-          }
-
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
             setUser(currentUser);
             setLoading(false);
