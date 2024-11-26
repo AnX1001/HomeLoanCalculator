@@ -1,13 +1,18 @@
 import { useAuth } from "../../firebase/AuthProvider";
+import { firebaseInitialized } from "../../firebase/firebase";
 import MinSide from "./MinSide";
 
 function ProtectedRoute() {
   const { user, loading } = useAuth();
 
-
-  if (loading) {
-    return <p>Loading...</p>;
+  if(!firebaseInitialized) {
+    return <p style={{padding: "20px"}}>Ingen autentisering tilgjengelig.</p>;
   }
+  if (loading) {
+    return <p style={{margin: "20px"}}>Laster siden...</p>;
+  }
+
+
 
 
   if (!user) {

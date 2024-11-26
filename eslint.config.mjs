@@ -15,7 +15,7 @@ export default [
       },
     },
     rules: {
-      "no-console": ["error", { allow: ["warn", "error"] }],
+      "no-console": ["error", { allow: ["warn", "error", "info"] }],
       "react/react-in-jsx-scope": "off", // Disable the rule for React 17+
       semi: ["error", "always"],
     },

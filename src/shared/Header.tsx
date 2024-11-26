@@ -45,7 +45,7 @@ function Header() {
             <button className={style.loginButton} onClick={!user ? () => setOpen((prevState) => !prevState) : handleSignOut}>
               {user ? "🔓 Logg ut" : "🔒 Logg på"}
             </button>
-            <LoginFormModal setOpen={setOpen} open={open} />
+          <LoginFormModal setOpen={setOpen} open={open} />  
           </li>
         </ul>
       </nav>
