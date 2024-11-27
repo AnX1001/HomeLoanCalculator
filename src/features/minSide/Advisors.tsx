@@ -22,6 +22,10 @@ function Advisors() {
     return <p>Laster inn rådgivere...</p>;
   }
 
+  if (error) {
+    <p>Noe gikk galt under nedlasting av rådgivere.</p>;
+  }
+
   return (
     <div className={styles.container}>
       <details name="radgivere">

@@ -11,5 +11,10 @@
     max-width: 550px;
     display: grid;
     justify-content: center;
+
+    .blogh2 {
+      border:1px solid red;
+      height: fit-content;
+    }
   }
 }
