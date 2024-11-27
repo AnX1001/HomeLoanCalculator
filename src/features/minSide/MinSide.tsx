@@ -2,15 +2,14 @@ import Illustration from "../home/loanInfo/Illustration";
 import styles from "./minSide.module.scss";
 import Support from "../../assets/images/support.svg";
 import useFetch from "../../utils/useFetch";
+import Advisors from "./Advisors";
+import { getAuth } from "firebase/auth";
 
 function MinSide() {
   const auth = getAuth();
 
-  const {data, isLoading, error } = useFetch("https://jsonplaceholder.typicode.com/users");
  
-
-
-  console.log(data);
+ 
 
   return (
     <div className={styles.wrapper}>
