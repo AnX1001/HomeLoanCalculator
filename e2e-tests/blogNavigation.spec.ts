@@ -1,25 +1,13 @@
 import { test, expect } from "@playwright/test";
- 
+
 
 // test.use({ launchOptions: { slowMo: 5000 } });
 
 test("should navigate to the blog page when the blog link is clicked", async ({
-  page,
-  context
+  page
 }) => {
   test.setTimeout(60000);
- // Mock Firebase sign-in endpoint
- await context.route("https://identitytoolkit.googleapis.com/**", (route) =>
-  route.fulfill({
-    status: 200,
-    contentType: "application/json",
-    body: JSON.stringify({
-      idToken: "fake-id-token",
-      email: "test@example.com",
-      localId: "12345",
-    }),
-  })
-);
+
   await page.goto("http://localhost:3000/");
   await page.getByRole("link", { name: "Blogg" }).click();
   await expect(
