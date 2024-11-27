@@ -1,0 +1,29 @@
+@use "../../Main.scss" as *;
+
+
+
+
+.container {
+  font-family: "Red Hat Text", sans-serif;
+  
+}
+
+.summary {
+  background-color: $darkBackground;
+  padding: 15px;
+  color: $customYellow;
+
+  &:hover {
+    background-color: $lightBackground;
+    cursor: pointer;
+  }
+}
+
+.officeList {
+  display: block;
+
+  li {
+    margin-bottom:10px;
+  }
+ 
+}

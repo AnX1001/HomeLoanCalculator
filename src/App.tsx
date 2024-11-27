@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
-import '../src/firebase/firebase';
+import "../src/firebase/firebase";
 
 
 import FinanceInputs, {
@@ -52,30 +52,29 @@ function App() {
 
   return (
     <AuthProvider>
-        <BrowserRouter
-      future={{
-        v7_startTransition: true,
-        v7_relativeSplatPath: true,
-      }}
-    >
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route
-            index
-            element={
-              <>
-                <FinanceInputs onChange={getAllValues} />
-                <Summary loanNeed={loanNeed} eligibleLoan={eligibleLoan} />
-              </>
-            }
-          />
-          <Route path="blog" element={<Blog />} />
-          <Route path="minside" element={<ProtectedRoute />}/>
-        </Route>
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter
+        future={{
+          v7_startTransition: true,
+          v7_relativeSplatPath: true,
+        }}
+      >
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route
+              index
+              element={
+                <>
+                  <FinanceInputs onChange={getAllValues} />
+                  <Summary loanNeed={loanNeed} eligibleLoan={eligibleLoan} />
+                </>
+              }
+            />
+            <Route path="blog" element={<Blog />} />
+            <Route path="minside" element={<ProtectedRoute />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </AuthProvider>
-  
   );
 }
 

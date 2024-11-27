@@ -1,15 +1,13 @@
 import Illustration from "../home/loanInfo/Illustration";
 import styles from "./minSide.module.scss";
 import Support from "../../assets/images/support.svg";
-import useFetch from "../../utils/useFetch";
 import Advisors from "./Advisors";
 import { getAuth } from "firebase/auth";
+import Offices from "./Offices";
 
+ 
 function MinSide() {
   const auth = getAuth();
-
- 
- 
 
   return (
     <div className={styles.wrapper}>
@@ -26,13 +24,14 @@ function MinSide() {
         <Advisors />
         <h3>Lorem Ipsum dolor sit</h3>
 
-      
         <p>
           Paragrahp Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Earum nemo molestias rem culpa excepturi asperiores pariatur ab illum
           adipisci facilis molestiae distinctio ad in officia, tenetur
           reprehenderit, dolores non aut.e
         </p>
+
+        <Offices continentCode={"EU"} />
 
         <p>
           Paragrahp Lorem ipsum dolor sit amet consectetur adipisicing elit.
