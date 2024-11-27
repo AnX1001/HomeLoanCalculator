@@ -1,0 +1,17 @@
+@use "../../Main.scss" as *;
+
+.summary {
+  background-color: $darkBackground;
+  padding: 15px;
+  color: $customYellow;
+
+  &:hover {
+    background-color: $lightBackground;
+    cursor: pointer;
+  }
+}
+
+.advisorsList {
+  display: block;
+ 
+}
