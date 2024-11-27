@@ -1,13 +1,16 @@
 import Illustration from "../home/loanInfo/Illustration";
 import styles from "./minSide.module.scss";
 import Support from "../../assets/images/support.svg";
+import useFetch from "../../utils/useFetch";
 import Advisors from "./Advisors";
 import { getAuth } from "firebase/auth";
 
 function MinSide() {
   const auth = getAuth();
 
-  console.log(auth?.currentUser);
+ 
+ 
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.innerWrapper}>
