@@ -1,5 +1,7 @@
 import { gql } from "@apollo/client";
 
+
+// TODO: install grapqhl codegen
 export const GET_COUNTRIES = gql`
   query Countries {
     countries {

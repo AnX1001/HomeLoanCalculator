@@ -1,0 +1,110 @@
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <title>LoginModalForm.tsx</title>
+      <link href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" type="text/css" rel="stylesheet">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.2/codemirror.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.2/mode/javascript/javascript.min.js" type="text/javascript" charset="utf-8"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.2/codemirror.min.css" type="text/css" rel="stylesheet">
+<script src="..\..\..\assets\source-file.js" type="text/javascript" charset="utf-8"></script>
+<link href="..\..\..\assets\source-file.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+    <div style="margin-top:3em" class="ui container"><h1 class="ui header"><a href="..\..\..\index.html">TypeScript coverage report</a></h1><table style="margin-top:2em" class="ui celled table"><thead class=""><tr class=""><th class="">Filename</th><th class="">Percent</th><th class="">Threshold</th><th class="">Total</th><th class="">Covered</th><th class="">Uncovered</th></tr></thead><tbody class=""><tr class="positive"><td class="">src\shared\LoginModalForm.tsx</td><td class="">95.76%</td><td class="">95%</td><td class="">118</td><td class="">113</td><td class="">5</td></tr></tbody></table><textarea id="editor" readonly="" style="margin-top:3em">import { useState } from &quot;react&quot;;
+import useEscapeKey from &quot;./useScapeKey&quot;;
+import style from &quot;./LoginModalForm.module.scss&quot;;
+import { getAuth, signInWithEmailAndPassword } from &quot;firebase/auth&quot;;
+import { firebaseInitialized } from &quot;../firebase/firebase&quot;;
+
+interface LoginModalFormProps {
+  open: boolean;
+  setOpen: (open: boolean) =&gt; void;
+}
+
+function LoginModalForm({ open, setOpen }: LoginModalFormProps) {
+  const [emailError, setEmailError] = useState(false);
+  useEscapeKey(() =&gt; setOpen(false), open);
+
+  if (!firebaseInitialized) {
+    {
+      console.warn(
+        &quot;Firebase environment variables are not set. Skipping Firebase initialization.&quot;,
+      );
+      return null;
+    }
+  }
+  const auth = getAuth();
+
+  const handleSubmit = (event: React.FormEvent&lt;HTMLFormElement&gt;): void =&gt; {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const email = formData.get(&quot;email&quot;);
+    const password = formData.get(&quot;password&quot;);
+
+    if(typeof email !== &quot;string&quot; || typeof password !== &quot;string&quot;){
+
+      console.error(&quot;Email or password is not a string. Invalid formdata&quot;);
+      return;
+    }
+
+    if (!email.includes(&quot;@&quot;)) {
+      setEmailError(true);
+      return;
+    }
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then(() =&gt; {})
+      .catch((error) =&gt; {
+        console.error(&quot;Login error:&quot;, error.code, error.message);
+      });
+
+    setOpen(false);
+  };
+
+  return (
+    &lt;dialog className={style.dialog} open={open}&gt;
+      &lt;button onClick={() =&gt; setOpen(false)} className={style.closeIconButton}&gt;
+        &amp;#x2716;
+      &lt;/button&gt;
+      &lt;form onSubmit={handleSubmit}&gt;
+        &lt;label htmlFor=&quot;email&quot;&gt;E-post&lt;/label&gt;
+        &lt;input
+          type=&quot;text&quot;
+          id=&quot;email&quot;
+          name=&quot;email&quot;
+          required
+          onChange={() =&gt; setEmailError(false)}
+        /&gt;
+        &lt;p style={{ color: &quot;red&quot;, fontSize: &quot;small&quot;, marginTop: &quot;-15px&quot; }}&gt;
+          {emailError &amp;&amp; &quot;Vennligst oppgi gyldig email&quot;}
+        &lt;/p&gt;
+        &lt;label htmlFor=&quot;password&quot;&gt;Passord&lt;/label&gt;
+        &lt;input
+          type=&quot;password&quot;
+          id=&quot;password&quot;
+          name=&quot;password&quot;
+          required
+          autoComplete=&quot;current-passord&quot;
+        /&gt;
+        &lt;button
+          onClick={() =&gt; handleSubmit}
+          className={style.loginButton}
+          type=&quot;submit&quot;
+        &gt;
+          Logg inn
+        &lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/dialog&gt;
+  );
+}
+
+export default LoginModalForm;
+</textarea><pre id="annotations" style="display:none">[{&quot;file&quot;:&quot;src\\shared\\LoginModalForm.tsx&quot;,&quot;line&quot;:47,&quot;character&quot;:14,&quot;text&quot;:&quot;error&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\shared\\LoginModalForm.tsx&quot;,&quot;line&quot;:48,&quot;character&quot;:38,&quot;text&quot;:&quot;error&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\shared\\LoginModalForm.tsx&quot;,&quot;line&quot;:48,&quot;character&quot;:44,&quot;text&quot;:&quot;code&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\shared\\LoginModalForm.tsx&quot;,&quot;line&quot;:48,&quot;character&quot;:50,&quot;text&quot;:&quot;error&quot;,&quot;kind&quot;:1},{&quot;file&quot;:&quot;src\\shared\\LoginModalForm.tsx&quot;,&quot;line&quot;:48,&quot;character&quot;:56,&quot;text&quot;:&quot;message&quot;,&quot;kind&quot;:1}]</pre></div>
+    <p class="footer-text">TypeScript Coverage Report generated by <a href="https://github.com/plantain-00/type-coverage">type-coverage</a> and <a href="https://github.com/alexcanessa/typescript-coverage-report">typescript-coverage-report</a> at Fri, 29 Nov 2024 22:53:27 GMT</p>
+    </body>
+  </html>
+  

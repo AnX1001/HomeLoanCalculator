@@ -10,6 +10,8 @@ function Offices({ continentCode }: { continentCode: string }) {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
+
+
   return (
     <div className={styles.container}>
       <details name="offices">

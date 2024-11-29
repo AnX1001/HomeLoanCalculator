@@ -1,0 +1,247 @@
+{
+  "fileCounts": {
+    "declarations.d.ts": {
+      "correctCount": 3,
+      "totalCount": 3
+    },
+    "src\\shared\\useScapeKey.tsx": {
+      "correctCount": 21,
+      "totalCount": 21
+    },
+    "src\\firebase\\firebase.ts": {
+      "correctCount": 26,
+      "totalCount": 26
+    },
+    "src\\shared\\LoginModalForm.tsx": {
+      "correctCount": 113,
+      "totalCount": 118
+    },
+    "src\\firebase\\AuthProvider.tsx": {
+      "correctCount": 58,
+      "totalCount": 58
+    },
+    "src\\shared\\Header.tsx": {
+      "correctCount": 70,
+      "totalCount": 73
+    },
+    "src\\Layout.tsx": {
+      "correctCount": 13,
+      "totalCount": 13
+    },
+    "src\\mortageContent\\mortageContent.json": {
+      "correctCount": 0,
+      "totalCount": 0
+    },
+    "src\\utils\\languageUtil.ts": {
+      "correctCount": 6,
+      "totalCount": 6
+    },
+    "src\\features\\home\\loanInfo\\LoanInfo.tsx": {
+      "correctCount": 31,
+      "totalCount": 31
+    },
+    "src\\utils\\sliderUtils.ts": {
+      "correctCount": 48,
+      "totalCount": 48
+    },
+    "src\\features\\home\\calculations\\ComboInput.tsx": {
+      "correctCount": 104,
+      "totalCount": 104
+    },
+    "src\\features\\home\\loanInfo\\Illustration.tsx": {
+      "correctCount": 18,
+      "totalCount": 18
+    },
+    "src\\features\\home\\calculations\\sliderInputsConfig.ts": {
+      "correctCount": 41,
+      "totalCount": 41
+    },
+    "src\\features\\home\\calculations\\FinanceInput.tsx": {
+      "correctCount": 99,
+      "totalCount": 99
+    },
+    "src\\features\\home\\calculations\\Formulas.tsx": {
+      "correctCount": 14,
+      "totalCount": 14
+    },
+    "src\\features\\home\\summary\\Result.tsx": {
+      "correctCount": 42,
+      "totalCount": 42
+    },
+    "src\\features\\home\\summary\\EquitySection.tsx": {
+      "correctCount": 23,
+      "totalCount": 23
+    },
+    "src\\features\\home\\summary\\Summary.tsx": {
+      "correctCount": 53,
+      "totalCount": 53
+    },
+    "src\\features\\blog\\Blog.tsx": {
+      "correctCount": 26,
+      "totalCount": 26
+    },
+    "src\\utils\\useFetch.ts": {
+      "correctCount": 42,
+      "totalCount": 43
+    },
+    "src\\features\\minSide\\Advisors.tsx": {
+      "correctCount": 59,
+      "totalCount": 59
+    },
+    "src\\features\\minSide\\queries.ts": {
+      "correctCount": 3,
+      "totalCount": 3
+    },
+    "src\\features\\minSide\\Offices.tsx": {
+      "correctCount": 54,
+      "totalCount": 60
+    },
+    "src\\features\\minSide\\MinSide.tsx": {
+      "correctCount": 45,
+      "totalCount": 45
+    },
+    "src\\features\\minSide\\ProtectedRoute.tsx": {
+      "correctCount": 24,
+      "totalCount": 24
+    },
+    "src\\App.tsx": {
+      "correctCount": 96,
+      "totalCount": 96
+    },
+    "src\\apollo\\apollo-client.ts": {
+      "correctCount": 8,
+      "totalCount": 8
+    },
+    "src\\index.tsx": {
+      "correctCount": 22,
+      "totalCount": 22
+    },
+    "src\\firebase\\auth.ts": {
+      "correctCount": 0,
+      "totalCount": 0
+    },
+    "src\\types\\index.d.ts": {
+      "correctCount": 2,
+      "totalCount": 2
+    },
+    "src\\utils\\LanguageProvider.tsx": {
+      "correctCount": 57,
+      "totalCount": 57
+    },
+    "src\\features\\home\\calculations\\Formulas.test.tsx": {
+      "correctCount": 52,
+      "totalCount": 52
+    }
+  },
+  "anys": [
+    {
+      "file": "src\\shared\\LoginModalForm.tsx",
+      "line": 47,
+      "character": 14,
+      "text": "error",
+      "kind": 1
+    },
+    {
+      "file": "src\\shared\\LoginModalForm.tsx",
+      "line": 48,
+      "character": 38,
+      "text": "error",
+      "kind": 1
+    },
+    {
+      "file": "src\\shared\\LoginModalForm.tsx",
+      "line": 48,
+      "character": 44,
+      "text": "code",
+      "kind": 1
+    },
+    {
+      "file": "src\\shared\\LoginModalForm.tsx",
+      "line": 48,
+      "character": 50,
+      "text": "error",
+      "kind": 1
+    },
+    {
+      "file": "src\\shared\\LoginModalForm.tsx",
+      "line": 48,
+      "character": 56,
+      "text": "message",
+      "kind": 1
+    },
+    {
+      "file": "src\\shared\\Header.tsx",
+      "line": 24,
+      "character": 14,
+      "text": "error",
+      "kind": 1
+    },
+    {
+      "file": "src\\shared\\Header.tsx",
+      "line": 25,
+      "character": 41,
+      "text": "error",
+      "kind": 1
+    },
+    {
+      "file": "src\\shared\\Header.tsx",
+      "line": 25,
+      "character": 47,
+      "text": "message",
+      "kind": 1
+    },
+    {
+      "file": "src\\utils\\useFetch.ts",
+      "line": 19,
+      "character": 14,
+      "text": "result",
+      "kind": 1
+    },
+    {
+      "file": "src\\features\\minSide\\Offices.tsx",
+      "line": 5,
+      "character": 10,
+      "text": "data",
+      "kind": 1
+    },
+    {
+      "file": "src\\features\\minSide\\Offices.tsx",
+      "line": 18,
+      "character": 11,
+      "text": "data",
+      "kind": 1
+    },
+    {
+      "file": "src\\features\\minSide\\Offices.tsx",
+      "line": 18,
+      "character": 16,
+      "text": "continent",
+      "kind": 1
+    },
+    {
+      "file": "src\\features\\minSide\\Offices.tsx",
+      "line": 18,
+      "character": 26,
+      "text": "countries",
+      "kind": 1
+    },
+    {
+      "file": "src\\features\\minSide\\Offices.tsx",
+      "line": 19,
+      "character": 13,
+      "text": "slice",
+      "kind": 1
+    },
+    {
+      "file": "src\\features\\minSide\\Offices.tsx",
+      "line": 20,
+      "character": 13,
+      "text": "map",
+      "kind": 1
+    }
+  ],
+  "percentage": 98.83540372670808,
+  "total": 1288,
+  "covered": 1273,
+  "uncovered": 15
+}
