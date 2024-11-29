@@ -18,19 +18,25 @@ function LoginModalForm({ open, setOpen }: LoginModalFormProps) {
       console.warn(
         "Firebase environment variables are not set. Skipping Firebase initialization.",
       );
-      return;
+      return null;
     }
   }
   const auth = getAuth();
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
 
     const form = event.currentTarget;
     const formData = new FormData(form);
 
-    const email = formData.get("email") as string;
-    const password = formData.get("password") as string;
+    const email = formData.get("email");
+    const password = formData.get("password");
+
+    if(typeof email !== "string" || typeof password !== "string"){
+
+      console.error("Email or password is not a string. Invalid formdata");
+      return;
+    }
 
     if (!email.includes("@")) {
       setEmailError(true);

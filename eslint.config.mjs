@@ -19,5 +19,8 @@ export default [
       "react/react-in-jsx-scope": "off", // Disable the rule for React 17+
       semi: ["error", "always"],
     },
+
+    ignores: ["node_modules/*", "coverage-ts/**"],
   },
 ];
+

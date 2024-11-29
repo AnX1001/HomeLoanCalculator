@@ -13,6 +13,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.28.0",
     "react-scripts": "5.0.1",
+    "semantic-ui-react": "^2.1.5",
     "typescript": "^5.4.5"
   },
   "overrides": {
@@ -31,9 +32,10 @@
     "test": "react-scripts test",
     "test:e2e": "playwright test",
     "eject": "react-scripts eject",
-    "lint": "eslint \"src/**/*.{js,mjs,cjs,ts,jsx,tsx}\"",
+    "lint": "eslint \"src/**/*.{js,mjs,cjs,ts,jsx,tsx}\" --ignore-pattern \"coverage-ts/**\"",
     "lint:css": "stylelint \"src/**/*.{css,scss}\"",
-    "prepare": "husky"
+    "prepare": "husky",
+    "ts-coverage": "typescript-coverage-report"
   },
   "eslintConfig": {
     "extends": [
@@ -74,11 +76,16 @@
     "sass-loader": "^16.0.3",
     "stylelint": "^16.8.1",
     "stylelint-config-standard": "^36.0.1",
+    "typescript-coverage-report": "^1.1.0",
     "typescript-eslint": "^8.14.0"
+  },
+  "typeCoverage": {
+    "atLeast": 95
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix"
+      "eslint --fix --ignore-pattern 'coverage-ts/**'",
+      "eslint --ignore-pattern 'coverage-ts/**'"
     ],
     "*.{css,scss}": [
       "stylelint --fix"
