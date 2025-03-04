@@ -21,6 +21,7 @@ function Summary({ loanNeed, eligibleLoan }: ResultsViewProps) {
   return (
     <div className={styles.wrapper}>
       <Result
+        testId={"loan-status-heading"}
         approvedLoan
         heading={approvedLoan[userLocale]}
         amount={eligibleLoan}

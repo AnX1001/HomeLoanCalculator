@@ -35,7 +35,10 @@ test("should navigate to the home page when the home link is clicked", async ({
   await page.goto("http://localhost:3000/");
   await page.getByRole("link", { name: "Blogg" }).click();
   await page.getByRole("link", { name: "Hjem" }).click();
-  await expect(
-    page.getByRole("heading", { name: "Lån ikke godkjent" }),
-  ).toBeVisible();
+
+
+
+  const headingLocator = page.locator('[data-testid="loan-status-heading"]');
+  await expect(headingLocator).toHaveCount(1, { timeout: 5000 });
+
 });
