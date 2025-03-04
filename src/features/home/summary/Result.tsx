@@ -14,7 +14,7 @@ function Result({ heading, amount, approvedLoan }: ResultProps) {
   const approvedLoanLabelText =
     amount > 1
       ? new Intl.NumberFormat("no-NO").format(amount) + ` kr`
-      : loanNotApproved[userLocale];
+      : "Lån ikke godkjent";
 
   const loanRequirementsText =
     amount > 1
