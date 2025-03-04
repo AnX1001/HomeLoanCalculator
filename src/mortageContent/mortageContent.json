@@ -71,6 +71,18 @@
     }
   },
   "result": {
+    "subheading": {
+      "loanNotApproved": {
+        "nb": "Lån ikke godkjent",
+        "en-US": "Loan not approved",
+        "vi": "Khoản vay không được chấp thuận"
+      },
+      "loanNotNecessary": {
+        "nb": "Lån ikke nødvendig",
+        "en-US": "Loan not necessary",
+        "vi": "Không cần khoản vay"
+      }
+    },
     "heading": {
       "approvedLoan": {
         "nb": "Innvilget lån",
