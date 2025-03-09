@@ -8,6 +8,7 @@ export default defineConfig({
 
   use: {
     trace: "on-first-retry",
+    locale: "no-NO",
   },
 
   /* Configure projects for major browsers */
@@ -15,6 +16,7 @@ export default defineConfig({
     {
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
+
     },
 
     {
