@@ -11,9 +11,9 @@
       "vi": "Vốn yêu cầu"
     },
     "equityRequirement": {
-      "nb": "15% egenkapital er et krav for boliglån. En annen mulighet er at familie stiller som kausjonist.",
-      "en-US": "15% equity is a requirement for mortgage loans. Another option is for family to act as guarantors.",
-      "vi": "15% vốn chủ sở hữu là một yêu cầu cho vay mua nhà. Một lựa chọn khác là gia đình đóng vai trò như người bảo lãnh."
+      "nb": "10% egenkapital er et krav for boliglån. En annen mulighet er at familie stiller som kausjonist.",
+      "en-US": "10% equity is a requirement for mortgage loans. Another option is for family to act as guarantors.",
+      "vi": "10% vốn chủ sở hữu là một yêu cầu cho vay mua nhà. Một lựa chọn khác là gia đình đóng vai trò như người bảo lãnh."
     },
     "additionalCosts": {
       "nb": "Husk å ta med omkostninger i beregningen. Størrelsen på omkostninger vil være avhengig av type bolig eller eiendom.",

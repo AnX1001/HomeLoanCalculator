@@ -16,6 +16,7 @@ import {
 import Summary from "./features/home/summary/Summary";
 
 import Blog from "./features/blog/Blog";
+import Rates from "./features/rates/Rates";
 import ProtectedRoute from "./features/minSide/ProtectedRoute";
 import { AuthProvider } from "./firebase/AuthProvider";
 
@@ -70,6 +71,7 @@ function App() {
               }
             />
             <Route path="blog" element={<Blog />} />
+            <Route path="finansdata" element={<Rates/>} />
             <Route path="minside" element={<ProtectedRoute />} />
           </Route>
         </Routes>

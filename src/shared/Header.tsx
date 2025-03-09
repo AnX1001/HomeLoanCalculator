@@ -39,6 +39,9 @@ function Header() {
             <Link to={"/blog"}>Blogg</Link>
           </li>
           <li>
+            <Link to={"/finansdata"}>Finansdata</Link>
+          </li>
+          <li>
             <Link to={"/minside"}>Min side</Link>
           </li>
           <li>

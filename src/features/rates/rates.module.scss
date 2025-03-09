@@ -1,0 +1,31 @@
+@use "../../Main" as *;
+
+.ratesInfoWrapper {
+  display: flex;
+  gap: $spacing-lg;
+}
+
+.ratesText {
+  font-size: small;
+  color: grey;
+  margin-top: -$spacing-sm;
+  margin-left: $spacing-xs;
+}
+
+.wrapper {
+  display: grid;
+  justify-content: center;
+  background-color: $customBeige;
+  padding: $spacing-xxl $spacing-lg $spacing-lg $spacing-lg;
+  height: 100vh;
+
+  .innerWrapper {
+    max-width: 550px;
+    display: grid;
+    justify-content: center;
+
+    .blogh2 {
+      height: fit-content;
+    }
+  }
+}
