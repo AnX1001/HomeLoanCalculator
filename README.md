@@ -10,7 +10,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Documentation
 
-- [Code Quality](src/docs/CodeQuality.md)
+- [Pre-Commit](src/docs/PreCommit.md)
 - [Loan State Flow Diagram](src/docs/LoanStateFlowDiagram.md)
 
 ### Testing
