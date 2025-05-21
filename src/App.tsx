@@ -19,7 +19,6 @@ import Blog from "./features/blog/Blog";
 import Rates from "./features/rates/Rates";
 import ProtectedRoute from "./features/minSide/ProtectedRoute";
 import { AuthProvider } from "./firebase/AuthProvider";
-
 function App() {
   // eslint-disable-next-line
   const [loanInputs, setLoanInputs] = useState<FinancialDetailsType>({

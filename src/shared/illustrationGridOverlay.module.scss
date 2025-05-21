@@ -1,0 +1,48 @@
+.illustration-grid-overlay {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 4px;
+  position: absolute; /* eller fixed for overlay full skjerm */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  z-index: 9999;
+
+  /* Grid linjer */
+  background-image: linear-gradient(
+      to right,
+      rgb(0 0 0 / 10%) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgb(0 0 0 / 10%) 1px, transparent 1px);
+  background-size: calc(100vw / 10) calc(100vh / 10);
+}
+
+.illustration-grid-overlay > * {
+  transition: grid-column 0.3s, grid-row 0.3s;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: auto;
+}
+
+.money {
+  grid-column: 8;
+  grid-row: 5;
+}
+
+
+/* Posisjonering for mindre skjermer */
+@media (width <= 768px) {
+  .money {
+    grid-column: 10;
+    grid-row: 5;
+  }
+
+
+}
