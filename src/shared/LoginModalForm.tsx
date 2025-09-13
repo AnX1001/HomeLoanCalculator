@@ -14,12 +14,10 @@ function LoginModalForm({ open, setOpen }: LoginModalFormProps) {
   useEscapeKey(() => setOpen(false), open);
 
   if (!firebaseInitialized) {
-    {
       console.warn(
         "Firebase environment variables are not set. Skipping Firebase initialization.",
       );
       return;
-    }
   }
   const auth = getAuth();
 
