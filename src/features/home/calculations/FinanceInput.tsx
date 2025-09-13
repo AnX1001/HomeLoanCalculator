@@ -7,8 +7,6 @@ import textContent from "../../../mortageContent/mortageContent.json";
 import Logo from "../../../assets/images/Logo.svg";
 import Illustration from "../loanInfo/Illustration";
 import { sliderInputs } from "./sliderInputsConfig";
-import IllustrationGridOverlay from "../../../shared/IllustrationGridOverlay";
-import style from "../../../shared/illustrationGridOverlay.module.scss";
 export interface FinancialDetailsType {
   propertyPrice: number;
   equity: number;
@@ -53,11 +51,6 @@ function FinanceInputs({
     <div className={styles.wrapper}>
 
       <div className={styles.innerWrapper}>
-        <IllustrationGridOverlay>
-
-          <h1 className={style["money"]}>💸</h1>
-
-        </IllustrationGridOverlay>
         <LoanInfo
           imageElement={
             <Illustration alt={illustrationText[userLocale]} src={Logo} />
