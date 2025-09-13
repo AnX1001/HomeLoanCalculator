@@ -33,7 +33,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint \"src/**/*.{js,mjs,cjs,ts,jsx,tsx}\"",
     "lint:css": "stylelint \"src/**/*.{css,scss}\"",
-    "prepare": "husky"
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
