@@ -6,13 +6,9 @@ import { useAuth } from "../firebase/AuthProvider";
 import { getAuth, signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
-
-
 function Header() {
   const [open, setOpen] = useState(false);
   const { user } = useAuth();
-
-
 
   const navigate = useNavigate();
 
@@ -26,7 +22,6 @@ function Header() {
         console.error("Sign-out error:", error.message);
       });
   };
-
 
   return (
     <header className={style.header}>
@@ -45,10 +40,15 @@ function Header() {
             <Link to={"/minside"}>Min side</Link>
           </li>
           <li>
-            <button className={style.loginButton} onClick={!user ? () => setOpen((prevState) => !prevState) : handleSignOut}>
+            <button
+              className={style.loginButton}
+              onClick={
+                !user ? () => setOpen((prevState) => !prevState) : handleSignOut
+              }
+            >
               {user ? "🔓 Logg ut" : "🔒 Logg på"}
             </button>
-          <LoginFormModal setOpen={setOpen} open={open} />  
+            <LoginFormModal setOpen={setOpen} open={open} />
           </li>
         </ul>
       </nav>

@@ -1,5 +1,4 @@
-import {defineConfig, devices } from "@playwright/test";
-
+import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
   testDir: "./e2e-tests",
@@ -16,7 +15,6 @@ export default defineConfig({
     {
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
-
     },
 
     {
@@ -53,5 +51,3 @@ export default defineConfig({
     reuseExistingServer: !process.env.CI,
   },
 });
-
-

@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import "../src/firebase/firebase";
 
-
 import FinanceInputs, {
   FinancialDetailsType,
 } from "./features/home/calculations/FinanceInput";
@@ -70,7 +69,7 @@ function App() {
               }
             />
             <Route path="blog" element={<Blog />} />
-            <Route path="finansdata" element={<Rates/>} />
+            <Route path="finansdata" element={<Rates />} />
             <Route path="minside" element={<ProtectedRoute />} />
           </Route>
         </Routes>

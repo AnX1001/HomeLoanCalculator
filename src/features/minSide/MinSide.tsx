@@ -5,7 +5,6 @@ import Advisors from "./Advisors";
 import { getAuth } from "firebase/auth";
 import Offices from "./Offices";
 
- 
 function MinSide() {
   const auth = getAuth();
 

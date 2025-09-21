@@ -1,11 +1,7 @@
 @use "../../Main.scss" as *;
 
-
-
-
 .container {
   font-family: "Red Hat Text", sans-serif;
-  
 }
 
 .summary {
@@ -23,7 +19,6 @@
   display: block;
 
   li {
-    margin-bottom:10px;
+    margin-bottom: 10px;
   }
- 
 }

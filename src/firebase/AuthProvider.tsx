@@ -23,7 +23,9 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       });
       return unsubscribe;
     } else {
-        console.warn('Firebase environment variables are not set. Skipping Firebase initialization.');
+      console.warn(
+        "Firebase environment variables are not set. Skipping Firebase initialization.",
+      );
     }
   }, []);
 

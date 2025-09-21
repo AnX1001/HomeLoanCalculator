@@ -49,7 +49,6 @@ function FinanceInputs({
 
   return (
     <div className={styles.wrapper}>
-
       <div className={styles.innerWrapper}>
         <LoanInfo
           imageElement={

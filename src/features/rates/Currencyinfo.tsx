@@ -25,7 +25,6 @@ function CurrencyInfo() {
   return (
     <>
       <p>$ {dollarCurrency}</p>
-     
     </>
   );
 }

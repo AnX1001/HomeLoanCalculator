@@ -8,8 +8,11 @@ interface ResultProps {
   testId?: string;
 }
 
-
-const { result: { subheading: { loanNotApproved, loanNotNecessary } } } = textContent;
+const {
+  result: {
+    subheading: { loanNotApproved, loanNotNecessary },
+  },
+} = textContent;
 
 function Result({ heading, amount, approvedLoan, testId }: ResultProps) {
   const approvedLoanLabelText =

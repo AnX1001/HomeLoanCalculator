@@ -19,12 +19,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 - End to end test (PlayWright)
 
 ### Playwright
+
 ```
-npx playwright test --ui 
+npx playwright test --ui
 
 npx playwright codegen
 
 npx playwright test  --headed
 ```
-
- 
