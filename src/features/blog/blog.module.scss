@@ -5,7 +5,7 @@
   justify-content: center;
   background-color: $customBeige;
   padding: $spacing-xxl $spacing-lg $spacing-lg $spacing-lg;
-  height: 100vh;
+  height: fit-content;
 
   .innerWrapper {
     max-width: 550px;
