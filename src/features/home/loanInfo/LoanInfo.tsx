@@ -1,3 +1,5 @@
+
+
 interface LoanInfoProps {
   title: string;
   subtitle: string;
@@ -14,13 +16,13 @@ function LoanInfo({
   imageElement,
 }: LoanInfoProps) {
   return (
-    <div>
+    <>
       <h1>{title}</h1>
       {imageElement}
       <h2>{subtitle}</h2>
       <p>{paragraph}</p>
       <p>{instructions}</p>
-    </div>
+    </>
   );
 }
 
