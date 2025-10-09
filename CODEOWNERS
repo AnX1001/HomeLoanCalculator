@@ -1,0 +1,13 @@
+# CODEOWNERS (team project)
+
+# Everything in repo by default → core team
+*           @org/core-team
+
+# Backend services
+/api/       @org/backend-team
+
+# Frontend code
+/web/       @org/frontend-team
+
+# Security policy
+SECURITY.md @org/security-team
