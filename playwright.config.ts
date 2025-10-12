@@ -8,6 +8,7 @@ export default defineConfig({
   use: {
     trace: "on-first-retry",
     locale: "no-NO",
+    baseURL: "http://localhost:3000",
   },
 
   /* Configure projects for major browsers */
