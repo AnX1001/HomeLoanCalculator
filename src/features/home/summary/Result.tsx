@@ -26,7 +26,7 @@ function Result({ heading, amount, approvedLoan, testId }: ResultProps) {
       : loanNotNecessary[userLocale];
   return (
     <section className={styles.wrapper}>
-      <h2 className={styles.heading}>{heading} </h2>
+      <h2 className={styles.heading}>{heading}</h2>
       <h3 data-testid={testId} className={styles.amount}>
         {approvedLoan ? approvedLoanLabelText : loanRequirementsText}
       </h3>
