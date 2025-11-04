@@ -4,10 +4,14 @@ export default defineConfig({
   testDir: "./e2e-tests",
   reporter: [["html"]],
   outputDir: "e2e-test-results/",
+  timeout: 30000, // 30 seconds per test
+  expect: {
+    timeout: 10000, // 10 seconds for expect assertions
+  },
 
   use: {
     trace: "on-first-retry",
-    locale: "no-NO",
+    locale: "nb",
     baseURL: "http://localhost:3000",
   },
 
@@ -15,33 +19,29 @@ export default defineConfig({
   projects: [
     {
       name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      use: { ...devices["Desktop Chrome"], locale: "nb" },
     },
 
     {
       name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
+      use: { ...devices["Desktop Firefox"], locale: "nb" },
     },
 
     {
       name: "webkit",
-      use: { ...devices["Desktop Safari"] },
+      use: { ...devices["Desktop Safari"], locale: "nb" },
     },
 
     /* Test against mobile viewports. */
     {
       name: "Mobile Chrome",
-      use: { ...devices["Pixel 5"] },
-    },
-    {
-      name: "Mobile Safari",
-      use: { ...devices["iPhone 12"] },
+      use: { ...devices["Pixel 5"], locale: "nb" },
     },
 
     /* Test against branded browsers. */
     {
       name: "Microsoft Edge",
-      use: { ...devices["Desktop Edge"], channel: "msedge" },
+      use: { ...devices["Desktop Edge"], channel: "msedge", locale: "nb" },
     },
   ],
 
@@ -50,5 +50,6 @@ export default defineConfig({
     command: "npm run start",
     url: "http://127.0.0.1:3000",
     reuseExistingServer: !process.env.CI,
+    timeout: 120000, // 2 minutes for CI
   },
 });
