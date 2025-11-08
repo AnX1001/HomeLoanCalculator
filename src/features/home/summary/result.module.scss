@@ -5,7 +5,6 @@ $fontSecondary: "Poppins", sans-serif;
 
 .wrapper {
   display: grid;
-  justify-content: center;
   max-width: 450px;
   color: $customYellow;
 }
@@ -14,12 +13,11 @@ $fontSecondary: "Poppins", sans-serif;
   font-family: $fontSecondary;
   font-size: 32px;
   margin: 0;
-  text-align: center;
+ 
 }
 
 .heading {
   font-family: $fontPrimary;
   font-size: 1.2rem;
-  text-align: center;
   font-weight: $font-weight-large;
 }

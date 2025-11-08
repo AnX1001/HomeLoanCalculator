@@ -1,4 +1,4 @@
-
+import styles from './loanInfo.module.scss';
 
 interface LoanInfoProps {
   title: string;
@@ -17,9 +17,10 @@ function LoanInfo({
 }: LoanInfoProps) {
   return (
     <>
-      <h1>{title}</h1>
+      <h1 className={styles.headingTitle}>{title}</h1>
+      <p className={styles.lead}>Regn ut drømmeboligen – før du flytter inn</p>
       {imageElement}
-      <h2>{subtitle}</h2>
+      <h2 className={styles.subHeading}>{subtitle}</h2>
       <p>{paragraph}</p>
       <p>{instructions}</p>
     </>

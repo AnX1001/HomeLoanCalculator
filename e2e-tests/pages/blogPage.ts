@@ -6,6 +6,6 @@ export class BlogPage {
 
     constructor(page: Page) {
         this.page = page;
-        this.heading = page.getByRole("heading", { name: "Blog tittel ipsum, dolor sit amet" });
+        this.heading = page.getByRole("heading", { name: "Tips og råd om boliglån" });
     }
 }
