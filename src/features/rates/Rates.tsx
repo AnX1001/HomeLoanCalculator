@@ -1,7 +1,6 @@
 import Illustration from "../home/loanInfo/Illustration";
 import CurrencyInfo from "./Currencyinfo";
-
-import Finance from "../../assets/images/finance.svg";
+import Finance from "../../assets/images/cNumbers.jpg";
 import styles from "./rates.module.scss";
 import CentralBankInterestRate from "./CentralBankInterestRate";
 
@@ -17,20 +16,20 @@ function Rates() {
       </p>
 
       <div className={styles.innerWrapper}>
-        <h1>Valuta Rente tittel ipsum, dolor sit amet</h1>
+  <h1 className="mb-0">Valutakurser og styringsrente</h1>
+        <p className={styles.lead}>
+          Følg med på valutakursene og Norges Banks styringsrente
+        </p>
         <Illustration
           src={Finance}
-          alt="Bilde av regnskapsfører"
+          alt="Bilde av økonomisk rådgivning"
         ></Illustration>
-        <h2>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          Reprehenderit error facere ratione, animi odio delectus.
-        </h2>
+        <h2 className="mt-16">Styringsrenten</h2>
         <p>
-          Paragrahp Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Earum nemo molestias rem culpa excepturi asperiores pariatur ab illum
-          adipisci facilis molestiae distinctio ad in officia, tenetur
-          reprehenderit, dolores non aut.e
+          Her finner du oppdaterte valutakurser og den gjeldende styringsrenten
+          fra Norges Bank. Dette gir deg bedre oversikt når du skal vurdere lån,
+          investeringer eller reiser til utlandet. Endringer i styringsrenten
+          påvirker både boliglån og sparerente.
         </p>
       </div>
     </div>

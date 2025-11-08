@@ -23,9 +23,9 @@
   },
   "loanInfo": {
     "illustrationText": {
-      "nb": "Bilde av sparegris",
-      "en-US": "Image of a piggy bank",
-      "vi": "Hình ảnh của heo đất"
+  "nb": "Bilde av boliger",
+  "en-US": "Image of houses",
+  "vi": "Hình ảnh của các ngôi nhà"
     },
     "heading": {
       "nb": "Boliglånskalkulatoren",

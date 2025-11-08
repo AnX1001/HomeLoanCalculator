@@ -4,7 +4,7 @@ import styles from "./inputs.module.scss";
 import { useState } from "react";
 import ComboInput from "./ComboInput";
 import textContent from "../../../mortageContent/mortageContent.json";
-import Logo from "../../../assets/images/Logo.svg";
+import Building from "../../../assets/images/buildings.jpg";
 import Illustration from "../loanInfo/Illustration";
 import { sliderInputs } from "./sliderInputsConfig";
 export interface FinancialDetailsType {
@@ -52,7 +52,7 @@ function FinanceInputs({
       <div className={styles.innerWrapper}>
         <LoanInfo
           imageElement={
-            <Illustration alt={illustrationText[userLocale]} src={Logo} />
+            <Illustration alt={illustrationText[userLocale]} src={Building} />
           }
           title={heading[userLocale]}
           subtitle={subHeading[userLocale]}
