@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import './Main.scss';
 
 import { ApolloProvider } from "@apollo/client";
 import client from "./apollo/apollo-client";

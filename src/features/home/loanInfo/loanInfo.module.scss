@@ -1,0 +1,37 @@
+@use "../../../Main" as *;
+
+
+.wrapper {
+    display: block;
+    background-color: $customBeige;
+    padding: $spacing-xxl $spacing-lg $spacing-lg $spacing-lg;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.innerWrapper {
+    max-width: 650px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
+.headingTitle {
+    margin-bottom: 0;
+}
+
+.subHeading {
+    margin-top: 24px;
+}
+
+@media (width <= 600px) {
+    .wrapper {
+        padding: $spacing-lg $spacing-xs;
+    }
+
+    .innerWrapper {
+        max-width: 100%;
+        padding: 0;
+    }
+}

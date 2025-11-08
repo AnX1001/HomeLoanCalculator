@@ -2,7 +2,7 @@
 
 This project is bootstraped by create-react-app.
 
-![alt text](./src/assets/images/GUIv2.png)
+![alt text](./src/assets/images/gui.png)
 
 `npm start`
 
