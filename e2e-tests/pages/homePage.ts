@@ -7,6 +7,7 @@ export class HomePage {
     readonly pageHeading: Locator;
     readonly finansdataLink: Locator;
     readonly loanStatusHeading: Locator;
+    readonly finansdataHeading: Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -15,8 +16,8 @@ export class HomePage {
         this.finansdataLink = page.getByRole("link", { name: "Finansdata" });
         this.pageHeading = page.getByRole("heading", { name: "Boliglånskalkulatoren", level: 1 });
         this.loanStatusHeading = page.locator('[data-testid="loan-status-heading"]');
+        this.finansdataHeading = page.getByRole("heading", { name: "Valutakurser og styringsrente" });
     }
-
 
     async navigateToBlog() {
         await this.blogLink.click();

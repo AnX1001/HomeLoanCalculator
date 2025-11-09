@@ -1,11 +1,13 @@
-import { test as base } from "@playwright/test";
+import { test as base, expect } from "@playwright/test";
 import { HomePage } from "../pages/homePage";
 import { BlogPage } from "../pages/blogPage";
+import { FinansdataPage } from "../pages/finansdataPage";
 
-type MyFixtures = {
+interface MyFixtures {
   homePage: HomePage;
   blogPage: BlogPage;
-};
+  finansdataPage: FinansdataPage;
+}
 
 export const test = base.extend<MyFixtures>({
   homePage: async ({ page }, use) => {
@@ -16,7 +18,6 @@ export const test = base.extend<MyFixtures>({
         configurable: true
       });
     });
-    
     await page.goto("/");
     const homePage = new HomePage(page);
     await use(homePage);
@@ -24,7 +25,11 @@ export const test = base.extend<MyFixtures>({
   blogPage: async ({ page }, use) => {
     const blogPage = new BlogPage(page);
     await use(blogPage);
+  },
+  finansdataPage: async ({ page }, use) => {
+    const finansdata = new FinansdataPage(page);
+    await use(finansdata);
   }
 });
 
-export { expect } from "@playwright/test";
+export { expect };
