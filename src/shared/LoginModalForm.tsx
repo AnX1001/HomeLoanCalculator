@@ -17,7 +17,8 @@ function LoginModalForm({ open, setOpen }: LoginModalFormProps) {
     console.warn(
       "Firebase environment variables are not set. Skipping Firebase initialization.",
     );
-    return;
+
+    return <p>Innlogging ikke tilgjengelig.</p>;
   }
   const auth = getAuth();
 

@@ -23,7 +23,7 @@ function Advisors() {
   }
 
   if (error) {
-    <p>Noe gikk galt under nedlasting av rådgivere.</p>;
+    return <p>Noe gikk galt under nedlasting av rådgivere.</p>;
   }
 
   return (
