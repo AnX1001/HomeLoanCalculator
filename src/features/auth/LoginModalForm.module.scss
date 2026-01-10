@@ -61,5 +61,11 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
+    .errorMessage {
+      color: "red";
+      font-size: "small";
+      margin-top: 15px;
+    }
   }
 }

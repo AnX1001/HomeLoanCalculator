@@ -31,13 +31,8 @@ function LoginModalForm({ open, setOpen }: LoginModalFormProps) {
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
 
-    if (!email.includes("@")) {
-      setEmailError(true);
-      return;
-    }
 
     signInWithEmailAndPassword(auth, email, password)
-      .then(() => {})
       .catch((error) => {
         console.error("Login error:", error.code, error.message);
       });
@@ -53,13 +48,13 @@ function LoginModalForm({ open, setOpen }: LoginModalFormProps) {
       <form onSubmit={handleSubmit}>
         <label htmlFor="email">E-post</label>
         <input
-          type="text"
+          type="email"
           id="email"
           name="email"
           required
           onChange={() => setEmailError(false)}
         />
-        <p style={{ color: "red", fontSize: "small", marginTop: "-15px" }}>
+        <p>
           {emailError && "Vennligst oppgi gyldig email"}
         </p>
         <label htmlFor="password">Passord</label>
@@ -71,7 +66,6 @@ function LoginModalForm({ open, setOpen }: LoginModalFormProps) {
           autoComplete="current-passord"
         />
         <button
-          onClick={() => handleSubmit}
           className={style.loginButton}
           type="submit"
         >
