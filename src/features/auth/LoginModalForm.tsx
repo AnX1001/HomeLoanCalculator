@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useEscapeKey from "../../shared/useScapeKey";
+import useEscapeKey from "../../hooks/useEscapeKey";
 import style from "./LoginModalForm.module.scss";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { firebaseInitialized } from "../../firebase/firebase";
