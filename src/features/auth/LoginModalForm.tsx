@@ -1,8 +1,8 @@
 import { useState } from "react";
-import useEscapeKey from "./useScapeKey";
+import useEscapeKey from "../../shared/useScapeKey";
 import style from "./LoginModalForm.module.scss";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { firebaseInitialized } from "../firebase/firebase";
+import { firebaseInitialized } from "../../firebase/firebase";
 
 interface LoginModalFormProps {
   open: boolean;

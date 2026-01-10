@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import LoginFormModal from "./LoginModalForm";
+import LoginFormModal from "../features/auth/LoginModalForm";
 import style from "./header.module.scss";
 import { useAuth } from "../firebase/AuthProvider";
 import { getAuth, signOut } from "firebase/auth";
