@@ -2,7 +2,6 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import "../src/firebase/firebase";
-
 import FinanceInputs, {
   FinancialDetailsType,
 } from "./features/home/calculations/FinanceInput";
@@ -13,11 +12,11 @@ import {
 } from "./features/home/calculations/Formulas";
 
 import Summary from "./features/home/summary/Summary";
-
 import Blog from "./features/blog/Blog";
 import Rates from "./features/rates/Rates";
 import ProtectedRoute from "./features/minSide/ProtectedRoute";
 import { AuthProvider } from "./firebase/AuthProvider";
+
 function App() {
   // eslint-disable-next-line
   const [loanInputs, setLoanInputs] = useState<FinancialDetailsType>({
