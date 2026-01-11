@@ -13,6 +13,10 @@ export default defineConfig({
     trace: "on-first-retry",
     locale: "nb",
     baseURL: "http://localhost:3000",
+    headless: false,
+    launchOptions: {
+      slowMo: 3000
+    }
   },
 
   /* Configure projects for major browsers */
