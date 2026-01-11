@@ -8,7 +8,7 @@ export class BlogPage {
     constructor(page: Page) {
         this.page = page;
         this.heading = page.getByRole("heading", { name: "Tips og råd om boliglån" });
-        this.advisorImage = page.locator('img[alt="Bilde av rådgiver"]');
+        this.advisorImage = page.getByRole('img', { name: "Bilde av rådgiver"});
     }
 
 
@@ -17,7 +17,6 @@ export class BlogPage {
             const img = document.querySelector('img[alt="Bilde av rådgiver"]') as HTMLImageElement;
             return img?.complete && img.naturalWidth > 0;
         });
-
     }
 
     async navigateToHome() {
