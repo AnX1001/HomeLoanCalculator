@@ -22,7 +22,7 @@ function Rates() {
         </p>
         <Illustration
           src={Finance}
-          alt="Bilde av økonomisk rådgivning"
+          alt="Bilde av valutakurser"
         ></Illustration>
         <h2 className="mt-16">Styringsrenten</h2>
         <p>
