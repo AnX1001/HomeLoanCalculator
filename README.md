@@ -24,4 +24,5 @@ npx playwright test --ui
 npx playwright codegen
 
 npx playwright test  --headed
+enj2
 ```
