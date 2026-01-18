@@ -7,6 +7,7 @@ import textContent from "../../../mortageContent/mortageContent.json";
 import Building from "../../../assets/images/buildings.jpg";
 import Illustration from "../loanInfo/Illustration";
 import { sliderInputs } from "./sliderInputsConfig";
+
 export interface FinancialDetailsType {
   propertyPrice: number;
   equity: number;

@@ -1,4 +1,4 @@
-import Illustration from "../home/loanInfo/Illustration";
+import Illustration from "../mortageCalculator/loanInfo/Illustration";
 import styles from "./blog.module.scss";
 import Advisor from "../../assets/images/advisor.jpg";
 

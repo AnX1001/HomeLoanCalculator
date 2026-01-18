@@ -1,4 +1,4 @@
-import Illustration from "../home/loanInfo/Illustration";
+import Illustration from "../mortageCalculator/loanInfo/Illustration";
 import styles from "./minSide.module.scss";
 import Support from "../../assets/images/support.svg";
 import Advisors from "./Advisors";

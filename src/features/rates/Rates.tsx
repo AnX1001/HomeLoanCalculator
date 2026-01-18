@@ -1,4 +1,4 @@
-import Illustration from "../home/loanInfo/Illustration";
+import Illustration from "../mortageCalculator/loanInfo/Illustration";
 import CurrencyInfo from "./Currencyinfo";
 import Finance from "../../assets/images/cNumbers.jpg";
 import styles from "./rates.module.scss";

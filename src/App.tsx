@@ -4,14 +4,14 @@ import Layout from "./Layout";
 import "../src/firebase/firebase";
 import FinanceInputs, {
   FinancialDetailsType,
-} from "./features/home/calculations/FinanceInput";
+} from "./features/mortageCalculator/calculations/FinanceInput";
 
 import {
   CalculateEligibleLoan,
   CalculateLoanNeed,
-} from "./features/home/calculations/Formulas";
+} from "./features/mortageCalculator/calculations/Formulas";
 
-import Summary from "./features/home/summary/Summary";
+import Summary from "./features/mortageCalculator/summary/Summary";
 import Blog from "./features/blog/Blog";
 import Rates from "./features/rates/Rates";
 import ProtectedRoute from "./features/minSide/ProtectedRoute";
